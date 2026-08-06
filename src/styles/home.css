@@ -32,6 +32,7 @@
   color: var(--color-ink);
   font-size: 32px;
   text-align: center;
+  max-width: 900px;
 }
 
 .hero__lead {
@@ -91,7 +92,6 @@
 @media (min-width: 768px) {
   .hero__heading {
     font-size: 56px;
-    white-space: nowrap;
   }
   .hero__lead {
     font-size: 24px;
@@ -906,7 +906,7 @@
   line-height: 1.25;
   color: var(--color-ink);
   text-align: center;
-  max-width: 90vw;
+  max-width: min(90vw, 800px);
   font-size: 28px;
 }
 .testimonials__heading .gradient-text {
@@ -1064,6 +1064,7 @@
   line-height: 1.25;
   color: var(--color-ink);
   font-size: 26px;
+  max-width: 700px;
 }
 .community-pricing-copy .gradient-text {
   background: linear-gradient(to right, #bf96c5, #4700c3);
