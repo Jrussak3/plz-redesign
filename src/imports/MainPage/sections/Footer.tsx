@@ -4,7 +4,7 @@ function FooterLegalBar({ className }: { className: string }) {
   return (
     <div className={className} data-name="div.footer-module--Footer--9c8fa">
       <div className="content-stretch flex items-center justify-center relative shrink-0 w-full" data-name="div.footer-module--container--c231e">
-        <div className="content-stretch flex flex-wrap items-center justify-center gap-x-2 gap-y-1 relative shrink-0 text-center" data-name="div.footer-module--content--90752">
+        <div className="content-stretch flex flex-wrap items-center justify-center gap-x-2 gap-y-1 relative shrink-0 w-full text-center" data-name="div.footer-module--content--90752">
           <div className="content-stretch flex items-start justify-center pr-[9.98px] relative shrink-0" data-name="span.footer-module--copyright--060f5">
             <div className="[word-break:break-word] flex flex-col font-['Poppins:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#333] text-[14px] text-center whitespace-nowrap">
               <p className="leading-[normal]">© Copyright 2026 Z GO S.A. Wszelkie prawa zastrzeżone.</p>

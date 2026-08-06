@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build:singlefile": "vite build --config vite.config.singlefile.ts",
     "dev": "vite"
   },
   "dependencies": {
@@ -69,7 +70,8 @@
     "@vitejs/plugin-react": "4.7.0",
     "playwright": "^1.62.1",
     "tailwindcss": "4.1.12",
-    "vite": "6.3.5"
+    "vite": "6.3.5",
+    "vite-plugin-singlefile": "^2.3.3"
   },
   "peerDependencies": {
     "react": "18.3.1",

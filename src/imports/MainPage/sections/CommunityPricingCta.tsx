@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import imgCommunityPricingIllustration from "@/Assets/Illustration.png";
+import imgCommunityPricingIllustration from "../../../Assets/Illustration.png";
 
 function CommunityPricingCopy() {
   return (
@@ -9,7 +9,7 @@ function CommunityPricingCopy() {
         <span className="leading-[1.25] text-[26px] sm:text-[32px] md:text-[48px]">{` społeczność `}</span>
         <span className="leading-[1.25] text-[26px] sm:text-[32px] md:text-[48px]">w</span>
         <span className="leading-[1.25] text-[26px] sm:text-[32px] md:text-[48px]">{` PLZ już od `}</span>
-        <span className="bg-clip-text bg-gradient-to-r from-[#bf96c5] leading-[1.25] text-[26px] sm:text-[32px] md:text-[48px] text-[transparent] to-[#4700c3]">90 zł miesięcznie</span>
+        <span className="bg-clip-text bg-gradient-to-r from-[#bf96c5] leading-[1.25] text-[26px] sm:text-[32px] md:text-[48px] text-[transparent] to-[#4700c3]">80 zł miesięcznie</span>
       </p>
       <Link
         to="/cennik"
@@ -46,7 +46,6 @@ function CommunityPricingCard() {
 export function CommunityPricingCtaSection() {
   return (
     <div
-      id="community-pricing"
       className="bg-[#f5edfd] content-stretch flex h-auto md:h-[540px] items-start justify-center relative shrink-0 w-full px-[24px] py-[40px] md:py-0 scroll-mt-[100px] md:scroll-mt-[140px]"
       data-name="Container"
     >

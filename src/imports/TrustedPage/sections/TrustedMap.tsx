@@ -5,6 +5,8 @@ import { TRUSTED_CITIES, type TrustedCity } from "../data/trustedCities";
 const MAP_WIDTH = 646.47;
 const MAP_HEIGHT = 555.32;
 
+const TRUSTED_ORGS = TRUSTED_CITIES.flatMap((city) => city.orgs);
+
 function TrustedIntro() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center justify-center relative shrink-0 w-full max-w-[800px] text-center">
@@ -73,7 +75,7 @@ function PolandMap() {
   const activeCity = TRUSTED_CITIES.find((city) => city.id === activeCityId) ?? null;
 
   return (
-    <div className="relative w-full max-w-[900px]" style={{ aspectRatio: `${MAP_WIDTH} / ${MAP_HEIGHT}` }}>
+    <div className="relative hidden w-full max-w-[900px] md:block" style={{ aspectRatio: `${MAP_WIDTH} / ${MAP_HEIGHT}` }}>
       <img alt="Mapa Polski" className="absolute inset-0 size-full" src={polandMap} />
       {TRUSTED_CITIES.map((city) => (
         <CityDot
@@ -89,22 +91,18 @@ function PolandMap() {
   );
 }
 
-function CityScroller() {
+function OrgsListing() {
   return (
-    <div className="flex w-full snap-x snap-mandatory gap-[16px] overflow-x-auto pb-[8px] md:hidden">
-      {TRUSTED_CITIES.map((city) => (
-        <div key={city.id} className="flex w-[220px] shrink-0 snap-start flex-col rounded-[8px] p-[12px] shadow-[0px_0px_5px_0px_rgba(1,1,1,0.3)]">
-          <p className="pb-[8px] font-['Poppins:Medium',sans-serif] text-[16px] text-[#22005d]">{city.label}</p>
-          <div className="flex flex-wrap items-start justify-center gap-[8px]">
-            {city.orgs.map((org) => (
-              <div key={org.name} className="flex w-[90px] flex-col items-center justify-center gap-[4px] p-[4px]">
-                <div className="flex h-[64px] w-[64px] items-center justify-center">
-                  <img alt="" className="h-full max-h-full w-auto max-w-full object-contain" src={org.logo} />
-                </div>
-                <span className="text-center font-['Poppins:SemiBold',sans-serif] text-[11px] leading-[1.3] text-[#22005d]">{org.name}</span>
-              </div>
-            ))}
+    <div className="flex w-full max-w-[1200px] flex-wrap items-start justify-center gap-[16px]">
+      {TRUSTED_ORGS.map((org) => (
+        <div
+          key={org.name}
+          className="flex w-[130px] shrink-0 flex-col items-center justify-center gap-[4px] rounded-[8px] p-[8px] shadow-[0px_0px_5px_0px_rgba(1,1,1,0.3)]"
+        >
+          <div className="flex h-[90px] w-[90px] items-center justify-center p-[4px]">
+            <img alt="" className="h-full max-h-full w-auto max-w-full object-contain" src={org.logo} />
           </div>
+          <span className="text-center font-['Poppins:SemiBold',sans-serif] text-[11px] leading-[1.3] text-[#22005d]">{org.name}</span>
         </div>
       ))}
     </div>
@@ -116,7 +114,7 @@ export function TrustedMapSection() {
     <div className="content-stretch flex flex-col items-center justify-center gap-[40px] py-[60px] md:py-[100px] px-[24px] relative shrink-0 w-full" data-name="Zaufali nam">
       <TrustedIntro />
       <PolandMap />
-      <CityScroller />
+      <OrgsListing />
     </div>
   );
 }

@@ -5,10 +5,12 @@ import TrustedPage from "@/imports/TrustedPage/index";
 import CennikPage from "@/imports/CennikPage/index";
 import VisionPage from "@/imports/VisionPage/index";
 import FaqPage from "@/imports/FaqPage/index";
+import ScrollToTop from "@/app/ScrollToTop";
 
 export default function App() {
   return (
     <div className="overflow-x-hidden">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />

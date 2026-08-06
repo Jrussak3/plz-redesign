@@ -1,4 +1,4 @@
-import imgQrCode from "../cee9d377f5b58e01bb09e55c8be801287e116dae.png";
+import imgQrCode from "../../../Assets/qr_cth.jpg";
 import { StoreBadgeRow } from "./AppBadges";
 
 function PricingCtaHeadlineBlock() {
@@ -90,7 +90,7 @@ function DownloadBanner() {
 
 export function PricingCtaSection() {
   return (
-    <div className="bg-white content-stretch flex flex-col gap-[40px] items-center justify-center pb-[40px] pt-[60px] md:pb-[80px] md:pt-[120px] px-[24px] relative rounded-[12px] shrink-0 w-full" data-name="div.price-list-module--banner--2390c">
+    <div id="community-pricing" className="bg-white content-stretch flex flex-col gap-[40px] items-center justify-center pb-[40px] pt-[60px] md:pb-[80px] md:pt-[120px] px-[24px] relative rounded-[12px] shrink-0 w-full scroll-mt-[100px] md:scroll-mt-[140px]" data-name="div.price-list-module--banner--2390c">
       <PricingCtaHeadlineBlock />
       <ChoiceCardsRow />
       <DownloadBanner />

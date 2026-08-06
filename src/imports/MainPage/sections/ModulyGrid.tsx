@@ -5,7 +5,6 @@ import pollsIcon from "../../../Assets/ankiety.svg";
 import votingReportsIcon from "../../../Assets/raporty z glosowan.svg";
 import tasksIcon from "../../../Assets/zadania.svg";
 import groupChatIcon from "../../../Assets/czat.svg";
-import adminChatIcon from "../../../Assets/terminal.svg";
 import donationsIcon from "../../../Assets/darowizny.svg";
 import documentsIcon from "../../../Assets/zalaczanie pism i dokumentow.svg";
 import galleryIcon from "../../../Assets/galeria.svg";
@@ -42,7 +41,7 @@ export function CommunityIntroSection() {
     <div className="content-stretch flex flex-col gap-[40px] items-center relative shrink-0 w-full">
       <CommunityIntroHeadline />
       <div className="font-['Poppins:Medium',sans-serif] leading-[0] not-italic opacity-80 relative shrink-0 text-[16px] sm:text-[18px] md:text-[24px] text-[rgba(34,0,93,0.75)] text-center max-w-[700px]">
-        <p className="leading-[1.25] mb-0">W PLZ masz wszystko pod ręką: narzędzia do komunikacji i aktywizacji twojej społeczności, zarządzanie jej budżetem i wspieranie wiedzy</p>
+        <p className="leading-[1.25] mb-0">W PLZ masz wszystko pod ręką: narzędzia do komunikacji i aktywizacji Twojej społeczności, zarządzania i przydzielania zadań oraz automatyzacji formalności</p>
       </div>
     </div>
   );
@@ -56,21 +55,20 @@ type ModuleCardData = {
 };
 
 const MODULE_CARDS: ModuleCardData[] = [
-  { title: "Tablica", description: "Dziel się bieżącymi informacjami ze swoją społecznością", icon: boardIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
-  { title: "Głosowania", description: "Pozwalający na sprawne przeprowadzanie głosowań (np. podczas Walnych Zgromadzeń)", icon: votingIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
-  { title: "Ankiety", description: "Przeprowadzaj błyskawiczne sondaże wśród swojej społeczności", icon: pollsIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
-  { title: "Raporty z głosowań", description: "Generuj raporty respektowane przez KRS", icon: votingReportsIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
-  { title: "Zadania", description: "Zarządzanie społecznością i przypisywanie zadań", icon: tasksIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
-  { title: "Czat grupowy", description: "Organizacje korzystające z PLZ uzyskują możliwość efektywnej komunikacji bez rozpraszaczy", icon: groupChatIcon, paddingClassName: "px-[4px] sm:px-[10px]" },
-  { title: "Czat z administratorem", description: "Prywatna, bezpieczna komunikacja z liderem organizacji", icon: adminChatIcon, paddingClassName: "px-[4px] sm:px-[10px]" },
-  { title: "Darowizny i składki członkowskie", description: "Obsługa darowizn, składek i pobierania opłat za pomocą Autopay", icon: donationsIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
-  { title: "Załączanie pism i dokumentów", description: "Załączanie pism i dokumentów", icon: documentsIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
+  { title: "Tablica", description: "Dziel się bieżącymi informacjami ze swoją społecznością, wraz z dokumentami i powiadomieniami na czas", icon: boardIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
+  { title: "Czat grupowy", description: "Prowadź efektywną komunikację bez rozpraszaczy.", icon: groupChatIcon, paddingClassName: "px-[4px] sm:px-[10px]" },
   { title: "Galeria", description: "Przeglądaj zdjęcia udostępniane w twojej społeczności", icon: galleryIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
+  { title: "Głosowania", description: "Przeprowadzaj sprawne głosowania, np. podczas Walnych Zgromadzeń.", icon: votingIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
+  { title: "Zadania", description: "Widzisz na bieżąco, które zadania są w toku, a które już zakończone, bez konieczności pytania kogokolwiek osobiście.", icon: tasksIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
+  { title: "Załączanie pism i dokumentów", description: "Wszystkie pisma i uchwały zostają w jednym miejscu, bez szukania w mailach czy różnych folderach", icon: documentsIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
+  { title: "Darowizny i składki członkowskie", description: "Obsługa darowizn, składek i pobierania opłat za pomocą Autopay", icon: donationsIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
   { title: "Twój sklep", description: "Możliwość e-sklepu w ramach danej społeczności", icon: storeIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
   { title: "Program lojalnościowy", description: "Obsługa dedykowanego programu lojalnościowego", icon: loyaltyProgramIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
+  { title: "Ankiety", description: "Przeprowadzaj błyskawiczne sondaże wśród swojej społeczności", icon: pollsIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
+  { title: "Raporty z głosowań", description: "Generuj raporty respektowane przez KRS", icon: votingReportsIcon, paddingClassName: "px-[4px] sm:px-[12px]" },
   { title: "Karta członkowska", description: "Dzięki której członkowie mogą zdobywać punkty za aktywność", icon: memberCardIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
   { title: "Wydarzenia", description: "Funkcje wspierające organizowanie i przeprowadzanie wydarzeń", icon: eventsIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
-  { title: "PLZ WeWb", description: "Pozwala na korzystanie z PLZ zarówno na telefonie, jak i komputerze", icon: desktopAppIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
+  { title: "PLZ Web", description: "Pozwala na korzystanie z PLZ zarówno na telefonie, jak i komputerze", icon: desktopAppIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
   { title: "Asystent AI", description: "Oferujący wsparcie w kwestiach związanych z prawem pracy", icon: aiAssistantIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
   { title: "Odkrywaj", description: "Korzystaj z zakładki odkrywaj do promocji organizacji", icon: discoverIcon, paddingClassName: "px-[4px] sm:px-[20px]" },
 ];

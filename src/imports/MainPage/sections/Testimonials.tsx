@@ -31,19 +31,23 @@ function TestimonialCard({
   isActive,
   isPeek,
   width,
+  instant,
   onClick,
 }: {
   testimonial: Testimonial;
   isActive: boolean;
   isPeek: boolean;
   width: number;
+  instant: boolean;
   onClick?: () => void;
 }) {
   return (
     <div
       onClick={onClick}
       style={{ width: `${width}px` }}
-      className={`bg-white content-stretch flex flex-col min-h-[420px] md:h-[582px] items-start justify-between p-[24px] md:p-[40px] relative rounded-[24px] shadow-[0px_20px_25px_0px_rgba(131,153,214,0.1),0px_8px_10px_0px_rgba(0,0,0,0.1)] shrink-0 transition-all duration-500 ease-out ${
+      className={`bg-white content-stretch flex flex-col min-h-[420px] md:h-[582px] items-start justify-between p-[24px] md:p-[40px] relative rounded-[24px] shadow-[0px_20px_25px_0px_rgba(131,153,214,0.1),0px_8px_10px_0px_rgba(0,0,0,0.1)] shrink-0 transition-all ease-out ${
+        instant ? "duration-0" : "duration-500"
+      } ${
         isActive
           ? "opacity-100 scale-100"
           : isPeek
@@ -156,6 +160,7 @@ function TestimonialsCarousel() {
                 isActive={distance === 0}
                 isPeek={Math.abs(distance) === 1}
                 width={slideWidth}
+                instant={instant}
                 onClick={distance === 0 ? undefined : () => goTo(trackIndex + Math.sign(distance))}
               />
             );

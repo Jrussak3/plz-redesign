@@ -11,7 +11,7 @@ function HeroHeadline() {
       </div>
       <div className="content-stretch flex flex-col items-center overflow-clip relative shrink-0 h-auto md:h-[70px]">
         <div className="content-stretch flex flex-col items-center relative shrink-0">
-          <p className="[word-break:break-word] font-['Poppins:Bold',sans-serif] leading-[1.25] not-italic relative min-w-0 text-[#22005d] text-[32px] sm:text-[40px] md:text-[56px] text-center whitespace-normal md:whitespace-nowrap md:shrink-0">dla twojej organizacji</p>
+          <p className="[word-break:break-word] font-['Poppins:Bold',sans-serif] leading-[1.25] not-italic relative min-w-0 text-[#22005d] text-[32px] sm:text-[40px] md:text-[56px] text-center whitespace-normal md:whitespace-nowrap md:shrink-0">dla Twojej organizacji</p>
         </div>
       </div>
     </div>
