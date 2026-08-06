@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLZ — FAQ</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/navbar.css" />
+  <link rel="stylesheet" href="/src/styles/footer.css" />
+  <link rel="stylesheet" href="/src/styles/faq.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" data-name="Navbar">
+    <div class="navbar__content">
+      <a href="index.html" class="navbar__logo" aria-label="PLZ — strona główna">
+        <svg viewBox="0 0 386.9682 56.8777" fill="none" width="100%" height="100%">
+          <path d="M42.0172 19.1771C42.0172 30.2273 33.1577 38.3506 20.8901 38.3506H13.0002V56.8777H0V0H20.8829C33.1505 0 42.0172 8.12692 42.0172 19.1771ZM29.0134 19.1771C29.0063 14.9502 25.5156 11.851 20.6387 11.851H13.0002V26.575H20.6387C25.5156 26.575 29.0063 23.3178 29.0063 19.1771H29.0134Z" fill="#DB0B34" />
+          <g transform="translate(66.9)"><path d="M35.51 44.8507V56.8777H0V0H13.0002V44.8507H35.51Z" fill="#DB0B34" /></g>
+          <g transform="translate(120.4)"><path d="M18.1895 44.8507H47.0342V56.8777H5.44429L0 45.6623L29.8071 11.9444H2.84424V0H42.4949L47.9392 11.1328L18.1895 44.8507Z" fill="#DB0B34" /></g>
+          <g transform="translate(46.1, 41.16)"><path d="M0 8.88108L8.52196 0.359122C22.4451 14.2715 45.1703 14.1099 59.2946 0L67.6621 8.36395C48.8477 27.1819 18.545 27.4333 0 8.88826" fill="#DB0B34" /></g>
+          <g transform="translate(95.3, 22.62)"><path d="M0.0071826 9.13965L8.53991 0.614095C31.7392 23.8134 69.6229 23.5404 93.1598 0L101.552 8.40704C73.2896 36.6735 27.8247 36.968 0 9.12528" fill="#DB0B34" /></g>
+        </svg>
+      </a>
+
+      <div class="navbar__desktop">
+        <div class="navbar__links" data-name="Navbar">
+          <a class="navbar__link" href="vision.html">Wizja</a>
+          <a class="navbar__link" href="about.html">O nas</a>
+          <a class="navbar__link" href="trusted.html">Zaufali nam</a>
+          <a class="navbar__link" href="cennik.html">Cennik</a>
+          <a class="navbar__link is-active" href="faq.html">FAQ</a>
+          <a class="navbar__link is-active" href="faq.html">Panel Partnera</a>
+        </div>
+        <div class="navbar__cta-row">
+          <div class="navbar__cta navbar__cta--join">Dołącz do PLZ</div>
+          <div class="navbar__cta navbar__cta--login">zaloguj się do plz web</div>
+        </div>
+      </div>
+
+      <button type="button" class="navbar__menu-btn" data-navbar-open aria-expanded="false" aria-label="Menu">
+        <span class="menu-icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="navbar__mobile-panel" data-navbar-panel aria-hidden="true">
+      <div class="navbar__overlay" data-navbar-overlay></div>
+      <div class="navbar__drawer">
+        <div class="navbar__drawer-close">
+          <button type="button" class="navbar__menu-btn" data-navbar-close aria-label="Zamknij menu">
+            <span class="menu-icon menu-icon--open"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+        <div class="navbar__drawer-links">
+          <a class="navbar__drawer-link" href="vision.html"><span>Wizja</span></a>
+          <a class="navbar__drawer-link" href="about.html"><span>O nas</span></a>
+          <a class="navbar__drawer-link" href="trusted.html"><span>Zaufali nam</span></a>
+          <a class="navbar__drawer-link" href="cennik.html"><span>Cennik</span></a>
+          <a class="navbar__drawer-link is-active" href="faq.html"><span>FAQ</span></a>
+          <a class="navbar__drawer-link is-active" href="faq.html"><span>Panel Partnera</span></a>
+        </div>
+        <div class="navbar__drawer-ctas">
+          <div class="navbar__cta navbar__cta--join">Dołącz do PLZ</div>
+          <div class="navbar__cta navbar__cta--login">zaloguj się do plz web</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== FAQ page ===== -->
+  <main class="faq-page">
+    <div class="faq">
+      <div class="faq-header">
+        <p class="faq-header__eyebrow">Centrum pomocy</p>
+        <h1 class="faq-header__title">
+          <span class="faq-header__title-ink">Najczęściej zadawane pytania </span>
+          <span class="gradient-text">(FAQ)</span>
+        </h1>
+        <p class="faq-header__lead">Masz pytania dotyczące działania aplikacji, bezpieczeństwa Twoich danych lub paneli społeczności? Znajdź odpowiedzi poniżej.</p>
+      </div>
+
+      <div class="faq-categories">
+        <!-- ===== Category: O aplikacji PLZ ===== -->
+        <div class="faq-category">
+          <div class="faq-category__head">
+            <p class="faq-category__title">O aplikacji PLZ</p>
+            <div class="faq-category__rule"></div>
+          </div>
+          <div class="faq-category__rows">
+
+            <div class="faq-row is-open">
+              <button type="button" class="faq-row__toggle" aria-expanded="true">
+                <span class="faq-row__question">Czym jest PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>PLZ to platforma składająca się z wielofunkcyjnej aplikacji mobilnej i panelu administracyjnego. Jest to autorski, polski produkt stworzony na potrzeby zmieniającego się świata. Platforma skierowana jest do szerokiego grona odbiorców zarówno indywidualnych jak i instytucjonalnych. Umożliwia zakładanie społeczności, skupia się na współpracy międzysektorowej. Każdy użytkownik może utworzyć swój profil, zapraszać znajomych, rozmawiać, dołączać do społeczności oraz korzystać z ofert w aplikacji.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak jest zbudowany PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aplikacja podzielona jest na zakładki "Ja", "Czat", "Razem", "Zakupy" i "Smart".</p>
+                    <p>- JA - to centrum profilu użytkownika, profil, zainteresowania, aktywności, zapisane wydarzenia i preferencje.</p>
+                    <p>- CZAT - odpowiada za zakładkę komunikacyjną. Rozmowy z użytkownikami i znajomymi.</p>
+                    <p>- RAZEM - Twoje społeczności w jednym miejscu czyli grupy wspólnego działania z wbudowanymi opcjami czatu i innymi opcjami wspólnych inicjatyw.</p>
+                    <p>- ZAKUPY - Marketplace lokalny i kooperacyjny — produkty, usługi, oferty od społeczności i partnerów.</p>
+                    <p>- SMART - Twoje finanse, inteligentne powiadomienia — to, co ważne dla Ciebie.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Co oznacza nazwa PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>- PLZ to skrót od PLATFORMA LOKALNYCH ZASOBÓW</p>
+                    <p>- PL to Polska dla nowego pokolenia - Generacji Z</p>
+                    <p>- Planeta, Ludzie, Zarządzanie - czyli narzędzie do organizacji i komunikacji społecznej na poziomie lokalnym</p>
+                    <p>- PLZ to również oznaczenie kodowe polskiego złotego przed denominacją w roku 1995 (kod ISO 4217 dla waluty polskiej, zł)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Czym jest społeczność?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sercem naszej Aplikacji jest zakładka RAZEM – to tam znajdują się wszystkie społeczności. Społeczność to tematyczna grupa, która działa w różnych obszarach (w różnych kategoriach). Uczestnik ma w niej wiele możliwości. Osoba zarządzająca taką społecznością ma bazę wszystkich członków w jednym miejscu. Zarządzanie jest łatwe i intuicyjne.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jakie funkcjonalności znajdę w społeczności?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Podstawowymi funkcjonalnościami w społeczności są:</p>
+                    <p>Czat – umożliwia rozmowy, wymienianie się opiniami, wysyłanie zdjęć i linków. Masz możliwość rozmawiania na czacie grupowym ze wszystkimi uczestnikami społeczności lub na czacie prywatnym z administratorem społeczności.</p>
+                    <p>Tablica – znajdziesz tam informacje, ogłoszenia, artykuły, ciekawostki itp.</p>
+                    <p>Dla mnie – oferta produktów tej społeczności – masz możliwość zakupu produktów, pobrania darmowych kuponów, rabatów, przekazania darowizn, opłat.</p>
+                    <p>Wydarzenia</p>
+                    <p>Mam – produkty, wydarzenia, w których zostały przez Ciebie zakupione, pobrane w tej społeczności.</p>
+                    <p>Głosowania i ankiety</p>
+                    <p>Zadania i projekty</p>
+                    <p>Moja karta – unikatowa karta członka społeczności. W zależności od rodzaju społeczności pewne funkcjonalności mogą być ograniczone.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Do czego służy kod społeczności i jak do nich dołączać?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Każda społeczność posiada swój własny, unikatowy kod. Dzięki niemu możesz do niej dołączyć. Występuje on w formie kodu QR oraz ciągu znaków (np. COOP_TECH_HUB).</p>
+                    <p>Do społeczności możesz dołączyć po zeskanowaniu lub wpisaniu kodu jeśli go znasz (administrator społeczności może Ci go udostępnić). Możesz także dołączyć do społeczności otwartych – znajdziesz je w katalogu głównym (zakładka RAZEM po wybraniu przycisku z plusikiem).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Czym jest kod QR i gdzie go znajdę w PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Kod QR to graficzna forma zapisu różnego rodzaju danych. W naszej aplikacji kod QR ma wiele zastosowań. Możesz znaleźć go:</p>
+                    <p>- przy swojej karcie w społeczności</p>
+                    <p>- po zeskanowaniu administrator może nadać Ci punkty lub Cię zidentyfikować</p>
+                    <p>- w zakładce "Ja" obok Twojego zdjęcia po zeskanowaniu przez innego użytkownika aplikacja zaprezentuje informację o uczestnictwie w społecznościach oraz liście świadczonych usług przez użytkownika w aplikacji.</p>
+                    <p>Ta funkcjonalność umożliwia również szybkie dodanie innego użytkownika aplikacji do listy kontaktów na czacie prywatnym w zakładce Czat.</p>
+                    <p>- przy produkcie – po zeskanowaniu go możesz coś kupić/przekazać darowiznę w formie kodu społeczności</p>
+                    <p>- po zeskanowaniu możesz dołączyć do danej społeczności</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Gdzie w aplikacji mogę wprowadzić kod społeczności i kod QR?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>W prawym dolnym rogu aplikacji istnieje zakładka SMART. Po kliknięciu w ikonkę kodu otwiera nam się skaner, którym możemy zeskanować konkretny kod, jest także możliwość wpisania kodu ręcznie.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak dołączyć do innych społeczności?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aby dołączyć do innych społeczności musisz wpisać lub zeskanować jej kod używając skanera w aplikacji. Jeżeli społeczność jest zamknięta będziesz musiał/musiała zaczekać na akceptację dołączenia przez administratora.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak mogę założyć grupę do rozmów ze znajomymi i dodawać ich do swoich kontaktów?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Kliknij zakładkę Razem i wybierz kategorię "Grupy prywatne", kliknij przycisk Plus + i utwórz grupę do rozmów. W każdej chwili możesz zapraszać do niej swoich znajomych. W takiej grupie znajdziesz również funkcjonalność stworzenia listy np. zakupów, zadań lub rzeczy do zrobienia. Możesz ją wykorzystać przy okazji organizowania wspólnych aktywności z przyjaciółmi i bliskimi.</p>
+                    <p>Jeśli chcesz porozmawiać z kimś prywatnie w zakładce "Czat" za pomocą przycisku z plusikiem możesz zapraszać swoich znajomych ze swojej książki telefonicznej. W tym celu aplikacja poprosi Cię o zgodę do Twojej książki adresowej. Wybrany numer jest zanonimizowany i nie informuje kogo dotyczy. System zapisze jedynie inicjały imienia i nazwiska wskazanej osoby z listy kontaktów.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak zaprosić innych do korzystania z PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Jeśli chcesz zaprosić innych do PLZ masz kilka możliwości. Możesz udostępnić kod społeczności na wybranym przez Ciebie komunikatorze, który udostępni się z instrukcją dołączenia do PLZ. Kod społeczności znajdziesz klikając w logo w społeczności w górnej części aplikacji.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Czy mogę zsynchronizować kalendarze i ustawiać przypomnienia?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Oczywiście w aplikacji PLZ istnieje możliwość synchronizacji kalendarza i ustawienia przypomnień. Wejdź w zakładkę SMART, następnie kliknij w pole "Kalendarz PLZ" i włącz opcję "Synchronizuj". Aplikacja może potrzebować udzielenia dostępu do Twojego kalendarza, co możesz wykonać wchodząc w ustawienia telefonu.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== Category: Dane osobowe ===== -->
+        <div class="faq-category">
+          <div class="faq-category__head">
+            <p class="faq-category__title">Dane osobowe</p>
+            <div class="faq-category__rule"></div>
+          </div>
+          <div class="faq-category__rows">
+
+            <div class="faq-row is-open">
+              <button type="button" class="faq-row__toggle" aria-expanded="true">
+                <span class="faq-row__question">Kto jest administratorem aplikacji?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Współadministratorami danych Platformy PLZ są:</p>
+                    <p>- Spółdzielnia z siedzibą w Warszawie, ul. Grażyny 13, 02-548 Warszawa, wpisaną do Rejestru Przedsiębiorców Krajowego Rejestru Sądowego pod nr KRS 0000894451, nr NIP: 527295541.</p>
+                    <p>- Z GO S.A. z siedzibą w Warszawie, ul. Grażyny 13, 02-548 Warszawa, wpisana do Rejestru Przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS 0000646372, NIP: 6751565680.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jakie dane muszę podać przy rejestracji i dlaczego?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Przy rejestracji musisz podać swoje: imię, nazwisko, e-mail, nr telefonu, datę urodzenia. Służy to weryfikacji konta użytkownika a podawane dane nie są dalej przetwarzane. W aplikacji mogą zarejestrować się tylko użytkownicy, którzy mają ukończony 13 rok życia. Podanie daty urodzenia pomaga nam zarządzać funkcjonalnościami, zgodami oraz publikowanymi treściami i produktami. Niektóre z nich są wyświetlane tylko dla pełnoletnich użytkowników.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak mogę usunąć konto w aplikacji?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aby usunąć konto należy postępować zgodnie z regulaminem aplikacji – konto można usunąć samodzielnie w zakładce "Ja" po kliknięciu w zębatkę w prawym górnym rogu. Chęć usunięcia konta musisz potwierdzić wpisując hasło swojego konta.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak aplikacja dba o prywatność i bezpieczeństwo? Czy moje dane są bezpieczne?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Tak, dane są bezpieczne.</p>
+                    <p>- Przetwarzanie danych osobowych odbywa się zgodnie z treścią Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 roku w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE.</p>
+                    <p>- Szczegółowe warunki przetwarzania danych zawarte są w klauzuli informacyjnej RODO stanowiącej załącznik do regulaminu.</p>
+                    <p>- Regulamin Aplikacji znajduje się do pobrania na stronie: https://static.plz.pl/regulamin-html</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== Category: Aplikacja technicznie ===== -->
+        <div class="faq-category">
+          <div class="faq-category__head">
+            <p class="faq-category__title">Aplikacja technicznie</p>
+            <div class="faq-category__rule"></div>
+          </div>
+          <div class="faq-category__rows">
+
+            <div class="faq-row is-open">
+              <button type="button" class="faq-row__toggle" aria-expanded="true">
+                <span class="faq-row__question">Gdzie mogę pobrać aplikację?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>W zależności od posiadanego oprogramowania możesz pobrać w:</p>
+                    <p>- App Store – iOS</p>
+                    <p>- Google Play – Android</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">O jakie zgody prosi aplikacja użytkownika by umożliwić działanie niektórych funkcji?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aby PLZ sprawnie działało musisz zezwolić na dostęp aplikacji do Twojego aparatu (byś mógł używać skaner) oraz do książki telefonicznej (abyś mógł zapraszać swoich znajomych).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Dlaczego aplikacja prosi o podanie daty urodzenia?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>W aplikacji mogą się zarejestrować różni użytkownicy, co najmniej, muszą mieć ukończony 13 rok życia. Podanie daty urodzenia pomaga nam zarządzać funkcjonalnościami, zgodami oraz publikowanymi treściami i produktami. Niektóre z nich wyświetlane są tylko dla pełnoletnich użytkowników.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak mogę zmienić język aplikacji?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Podstawowym językiem aplikacji jest język polski. Jeśli chcesz go zmienić, musisz zmienić język w ustawieniach Twojego telefonu. Aplikacja automatycznie dostosuje się do wybranego języka urządzenia - polskiego, angielskiego czy ukraińskiego. Dla pozostałych języków obcych aplikacja dostosuje angielski.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Kim jest ZUZA?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>ZUZA to bot PLZ, wysyła automatycznie komunikaty systemowe na czacie - np. istotne zmiany, komunikaty techniczne, powiadomienia dla użytkowników, przypomnienia.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Jak mogę sprawdzić wersję aplikacji?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Wersję aplikacji znajdziesz w zakładce "Ja" na dolnym pasku menu. Następnie w prawym górnym rogu, kliknij zębatkę i wybierz opcję "O aplikacji".</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">W jaki sposób mogę zaktualizować aplikację?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aplikacja z reguły aktualizuje się automatycznie. W przypadku starszej wersji należy wejść do sklepu Google Play/App Store i wybrać opcję "Zaktualizuj"/"Uaktualnij".</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Co zrobić jeśli nie mogę się zalogować na nowym urządzeniu?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sprawdź czy podany e-mail, telefon i hasło są prawidłowe oraz na nie zostało założone konto. Jeżeli wszystkie podawane dane są poprawne skontaktuj się z naszą obsługą klienta (mail).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== Category: Dla administratora społeczności ===== -->
+        <div class="faq-category">
+          <div class="faq-category__head">
+            <p class="faq-category__title">Dla administratora społeczności</p>
+            <div class="faq-category__rule"></div>
+          </div>
+          <div class="faq-category__rows">
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Chcę mieć społeczność w PLZ, co powinienem zrobić?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <!-- No answer content in source data for this question -->
+            </div>
+
+            <div class="faq-row is-open">
+              <button type="button" class="faq-row__toggle" aria-expanded="true">
+                <span class="faq-row__question">Jak zacząć sprzedaż produktów w aplikacji?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Każda zainteresowana społeczność może uruchomić dostęp do bramki płatniczej poprzez formularz rejestracyjny. Należy skontaktować się z opiekunem społeczności w celu integracji z bramką płatniczą. Środki ze sprzedaży produktów będą wpływały na podany nr konta.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Z jakiego operatora płatności korzysta aplikacja PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Platforma PLZ współpracuje z poniższymi serwisami:</p>
+                    <p>Autopay S.A. z siedzibą w Sopocie, ul. Powstańców Warszawy 6, 81-718 Sopot, NIP 585-13-51-185</p>
+                    <p>Fiserv Polska S.A., Aleje Jerozolimskie 100, 00-807 Warszawa, NIP 526-02-10-429</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Na czym polega integracja z operatorem płatności?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Integracja z operatorem płatności to techniczne połączenie aplikacji z bramką (np. Autopay), które umożliwia przyjmowanie i obsługę płatności (jednorazowych lub cyklicznych) bezpośrednio w aplikacji.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CTA card ===== -->
+      <div class="faq-cta">
+        <div class="faq-cta__copy">
+          <h2 class="faq-cta__title">Nadal nie znalazłeś odpowiedzi?</h2>
+          <div class="faq-cta__button">Skontaktuj się</div>
+        </div>
+        <div class="faq-cta__illustration">
+          <img alt="" src="/assets/Illustration.png" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="dark-footer" data-name="Group_2583">
+    <div class="dark-footer__sitemap">
+      <div class="dark-footer__links">
+        <a href="cennik.html">Cennik</a>
+        <a href="vision.html">Wizja</a>
+        <a href="about.html">O nas</a>
+        <a href="trusted.html">Zaufali nam</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="dark-footer__meta">Administratorem strony jest <a href="https://plz.coop/" target="_blank" rel="noopener">PLZ Spółdzielnia</a></p>
+      <p class="dark-footer__meta">Zobacz też: <a href="https://www.hub.coop/" target="_blank" rel="noopener">Centrum Technologii Spółdzielczych</a></p>
+    </div>
+    <div class="dark-footer__illustration">
+      <img alt="" src="/assets/6e9ed4ffbdfe1b09de596482abafada69522af29.png" />
+    </div>
+    <div class="dark-footer__scallop">
+      <svg viewBox="0 0 1920 86" preserveAspectRatio="none" fill="none">
+        <path d="M96 8.39894L0 25.3263V86H1920V25.3263L1824 8.39894C1760.49 -2.79965 1695.51 -2.79964 1632 8.39894C1568.49 19.5974 1503.51 19.5974 1440 8.39894C1376.49 -2.79964 1311.51 -2.79964 1248 8.39894C1184.49 19.5974 1119.51 19.5974 1056 8.39894C992.49 -2.79964 927.51 -2.79964 864 8.39894C800.49 19.5974 735.51 19.5974 672 8.39894C608.49 -2.79964 543.51 -2.79964 480 8.39894C416.49 19.5974 351.51 19.5974 288 8.39894C224.49 -2.79964 159.51 -2.79965 96 8.39894Z" fill="#F3EDFF" />
+      </svg>
+    </div>
+  </footer>
+  <div class="legal-bar">
+    <div class="legal-bar__content">
+      <span>© Copyright 2026 Z GO S.A. Wszelkie prawa zastrzeżone.</span>
+      <span>Polityka prywatności</span>
+      <span>Przeciwdziałanie napastowaniu i CSAM</span>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/faq.js"></script>
+</body>
+</html>

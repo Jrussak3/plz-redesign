@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLZ — Cennik</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/navbar.css" />
+  <link rel="stylesheet" href="/src/styles/footer.css" />
+  <link rel="stylesheet" href="/src/styles/cennik.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" data-name="Navbar">
+    <div class="navbar__content">
+      <a href="index.html" class="navbar__logo" aria-label="PLZ — strona główna">
+        <svg viewBox="0 0 386.9682 56.8777" fill="none" width="100%" height="100%">
+          <path d="M42.0172 19.1771C42.0172 30.2273 33.1577 38.3506 20.8901 38.3506H13.0002V56.8777H0V0H20.8829C33.1505 0 42.0172 8.12692 42.0172 19.1771ZM29.0134 19.1771C29.0063 14.9502 25.5156 11.851 20.6387 11.851H13.0002V26.575H20.6387C25.5156 26.575 29.0063 23.3178 29.0063 19.1771H29.0134Z" fill="#DB0B34" />
+          <g transform="translate(66.9)"><path d="M35.51 44.8507V56.8777H0V0H13.0002V44.8507H35.51Z" fill="#DB0B34" /></g>
+          <g transform="translate(120.4)"><path d="M18.1895 44.8507H47.0342V56.8777H5.44429L0 45.6623L29.8071 11.9444H2.84424V0H42.4949L47.9392 11.1328L18.1895 44.8507Z" fill="#DB0B34" /></g>
+          <g transform="translate(46.1, 41.16)"><path d="M0 8.88108L8.52196 0.359122C22.4451 14.2715 45.1703 14.1099 59.2946 0L67.6621 8.36395C48.8477 27.1819 18.545 27.4333 0 8.88826" fill="#DB0B34" /></g>
+          <g transform="translate(95.3, 22.62)"><path d="M0.0071826 9.13965L8.53991 0.614095C31.7392 23.8134 69.6229 23.5404 93.1598 0L101.552 8.40704C73.2896 36.6735 27.8247 36.968 0 9.12528" fill="#DB0B34" /></g>
+        </svg>
+      </a>
+
+      <div class="navbar__desktop">
+        <div class="navbar__links" data-name="Navbar">
+          <a class="navbar__link" href="vision.html">Wizja</a>
+          <a class="navbar__link" href="about.html">O nas</a>
+          <a class="navbar__link" href="trusted.html">Zaufali nam</a>
+          <a class="navbar__link is-active" href="cennik.html">Cennik</a>
+          <a class="navbar__link" href="faq.html">FAQ</a>
+          <a class="navbar__link" href="faq.html">Panel Partnera</a>
+        </div>
+        <div class="navbar__cta-row">
+          <div class="navbar__cta navbar__cta--join">Dołącz do PLZ</div>
+          <div class="navbar__cta navbar__cta--login">zaloguj się do plz web</div>
+        </div>
+      </div>
+
+      <button type="button" class="navbar__menu-btn" data-navbar-open aria-expanded="false" aria-label="Menu">
+        <span class="menu-icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="navbar__mobile-panel" data-navbar-panel aria-hidden="true">
+      <div class="navbar__overlay" data-navbar-overlay></div>
+      <div class="navbar__drawer">
+        <div class="navbar__drawer-close">
+          <button type="button" class="navbar__menu-btn" data-navbar-close aria-label="Zamknij menu">
+            <span class="menu-icon menu-icon--open"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+        <div class="navbar__drawer-links">
+          <a class="navbar__drawer-link" href="vision.html"><span>Wizja</span></a>
+          <a class="navbar__drawer-link" href="about.html"><span>O nas</span></a>
+          <a class="navbar__drawer-link" href="trusted.html"><span>Zaufali nam</span></a>
+          <a class="navbar__drawer-link is-active" href="cennik.html"><span>Cennik</span></a>
+          <a class="navbar__drawer-link" href="faq.html"><span>FAQ</span></a>
+          <a class="navbar__drawer-link" href="faq.html"><span>Panel Partnera</span></a>
+        </div>
+        <div class="navbar__drawer-ctas">
+          <div class="navbar__cta navbar__cta--join">Dołącz do PLZ</div>
+          <div class="navbar__cta navbar__cta--login">zaloguj się do plz web</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Cennik page ===== -->
+  <div class="cennik-page">
+    <section class="pricing-section">
+      <h1 class="pricing-heading">
+        <span class="pricing-heading__ink">Cennik </span><span class="gradient-text">PLZ</span>
+      </h1>
+
+      <!-- Desktop plan row -->
+      <div class="pricing-row">
+
+        <!-- Pakiet Podstawowy -->
+        <div class="plan-card">
+          <div class="plan-card__body plan-card__body--podstawowy">
+            <div class="plan-card__heading">
+              <p class="plan-card__name">Pakiet Podstawowy</p>
+              <p class="plan-card__subtitle">Do 250 członków społeczności</p>
+            </div>
+            <div class="plan-card__price">
+              <p class="plan-card__price-main">80 zł</p>
+              <p class="plan-card__price-note">netto miesięcznie</p>
+            </div>
+            <div class="plan-card__features">
+              <div class="feature-row">
+                <span class="feature-row__label">Czat grupowy, indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Powiadomienia push</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Głosowania oraz możliwość generowania raportów z głosowań</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Doradztwo Konsultantki Rozwoju Społeczności</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Przyjmowanie płatności w aplikacji</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Twój sklep</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Możliwość tworzenia programów partnerskich</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Możliwość utworzenia wielu społeczności</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+            </div>
+            <button type="button" class="plan-card__cta">Wypróbuj</button>
+          </div>
+        </div>
+
+        <!-- Pakiet Pro (featured) -->
+        <div class="plan-card plan-card--featured">
+          <div class="plan-card__badge"><p>Najczęściej wybierany</p></div>
+          <div class="plan-card__body plan-card__body--pro">
+            <div class="plan-card__heading">
+              <p class="plan-card__name">Pakiet Pro</p>
+              <p class="plan-card__subtitle">250-500 członków społeczności</p>
+            </div>
+            <div class="plan-card__price">
+              <p class="plan-card__price-main">145 zł</p>
+              <p class="plan-card__price-note">netto miesięcznie</p>
+            </div>
+            <div class="plan-card__features">
+              <div class="feature-row">
+                <span class="feature-row__label">Czat grupowy, indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Powiadomienia push</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Głosowania oraz możliwość generowania raportów z głosowań</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Doradztwo Konsultantki Rozwoju Społeczności</span>
+                <span class="feature-pill">60 minut kwartalnie</span>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Przyjmowanie płatności w aplikacji</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Twój sklep</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Możliwość tworzenia programów partnerskich</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Możliwość utworzenia wielu społeczności</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+              </div>
+            </div>
+            <button type="button" class="plan-card__cta">Wypróbuj</button>
+          </div>
+        </div>
+
+        <!-- Pakiet Indywidualny -->
+        <div class="plan-card">
+          <div class="plan-card__body plan-card__body--indywidualny">
+            <div class="plan-card__heading">
+              <p class="plan-card__name">Pakiet Indywidualny</p>
+              <p class="plan-card__subtitle">ponad 1000 członków społeczności</p>
+            </div>
+            <div class="plan-card__price">
+              <p class="plan-card__price-main">500 zł <span class="plan-card__price-suffix">+ 10 zł / społeczność</span></p>
+              <p class="plan-card__price-note">netto miesięcznie</p>
+            </div>
+            <div class="plan-card__features">
+              <div class="feature-row">
+                <span class="feature-row__label">Czat grupowy, indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Powiadomienia push</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Głosowania oraz możliwość generowania raportów z głosowań</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Doradztwo Konsultantki Rozwoju Społeczności</span>
+                <span class="feature-pill">120 minut kwartalnie</span>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Przyjmowanie płatności w aplikacji</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Twój sklep</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Możliwość tworzenia programów partnerskich</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+              <div class="feature-row">
+                <span class="feature-row__label">Możliwość utworzenia wielu społeczności</span>
+                <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+              </div>
+            </div>
+            <button type="button" class="plan-card__cta">Wypróbuj</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile peek carousel -->
+      <div class="pricing-carousel" data-carousel-wrapper>
+        <div class="pricing-carousel__viewport" data-carousel="pricing-mobile">
+          <div class="pricing-carousel__track" data-carousel-track>
+
+            <div class="pricing-carousel__slide">
+              <div class="plan-card">
+                <div class="plan-card__body plan-card__body--podstawowy">
+                  <div class="plan-card__heading">
+                    <p class="plan-card__name">Pakiet Podstawowy</p>
+                    <p class="plan-card__subtitle">Do 250 członków społeczności</p>
+                  </div>
+                  <div class="plan-card__price">
+                    <p class="plan-card__price-main">80 zł</p>
+                    <p class="plan-card__price-note">netto miesięcznie</p>
+                  </div>
+                  <div class="plan-card__features">
+                    <div class="feature-row">
+                      <span class="feature-row__label">Czat grupowy, indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Powiadomienia push</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Głosowania oraz możliwość generowania raportów z głosowań</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Doradztwo Konsultantki Rozwoju Społeczności</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Przyjmowanie płatności w aplikacji</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Twój sklep</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Możliwość tworzenia programów partnerskich</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Możliwość utworzenia wielu społeczności</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                  </div>
+                  <button type="button" class="plan-card__cta">Wypróbuj</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-carousel__slide">
+              <div class="plan-card plan-card--featured">
+                <div class="plan-card__badge"><p>Najczęściej wybierany</p></div>
+                <div class="plan-card__body plan-card__body--pro">
+                  <div class="plan-card__heading">
+                    <p class="plan-card__name">Pakiet Pro</p>
+                    <p class="plan-card__subtitle">250-500 członków społeczności</p>
+                  </div>
+                  <div class="plan-card__price">
+                    <p class="plan-card__price-main">145 zł</p>
+                    <p class="plan-card__price-note">netto miesięcznie</p>
+                  </div>
+                  <div class="plan-card__features">
+                    <div class="feature-row">
+                      <span class="feature-row__label">Czat grupowy, indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Powiadomienia push</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Głosowania oraz możliwość generowania raportów z głosowań</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Doradztwo Konsultantki Rozwoju Społeczności</span>
+                      <span class="feature-pill">60 minut kwartalnie</span>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Przyjmowanie płatności w aplikacji</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Twój sklep</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Możliwość tworzenia programów partnerskich</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Możliwość utworzenia wielu społeczności</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M3 3L13 13M13 3L3 13" stroke="#4b3d63" stroke-linecap="round" stroke-width="1.8" /></svg>
+                    </div>
+                  </div>
+                  <button type="button" class="plan-card__cta">Wypróbuj</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-carousel__slide">
+              <div class="plan-card">
+                <div class="plan-card__body plan-card__body--indywidualny">
+                  <div class="plan-card__heading">
+                    <p class="plan-card__name">Pakiet Indywidualny</p>
+                    <p class="plan-card__subtitle">ponad 1000 członków społeczności</p>
+                  </div>
+                  <div class="plan-card__price">
+                    <p class="plan-card__price-main">500 zł <span class="plan-card__price-suffix">+ 10 zł / społeczność</span></p>
+                    <p class="plan-card__price-note">netto miesięcznie</p>
+                  </div>
+                  <div class="plan-card__features">
+                    <div class="feature-row">
+                      <span class="feature-row__label">Czat grupowy, indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Powiadomienia push</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Głosowania oraz możliwość generowania raportów z głosowań</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Doradztwo Konsultantki Rozwoju Społeczności</span>
+                      <span class="feature-pill">120 minut kwartalnie</span>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Przyjmowanie płatności w aplikacji</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Twój sklep</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Możliwość tworzenia programów partnerskich</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                    <div class="feature-row">
+                      <span class="feature-row__label">Możliwość utworzenia wielu społeczności</span>
+                      <svg class="feature-icon" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#22005d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                    </div>
+                  </div>
+                  <button type="button" class="plan-card__cta">Wypróbuj</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-nav-btn" data-carousel-prev aria-label="Poprzedni pakiet">
+            <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+          </button>
+          <div class="carousel-dots" data-carousel-dots>
+            <button type="button" class="carousel-dot" data-dot aria-label="Przejdź do pakietu 1"><span class="carousel-dot__bullet"></span></button>
+            <button type="button" class="carousel-dot" data-dot aria-label="Przejdź do pakietu 2"><span class="carousel-dot__bullet"></span></button>
+            <button type="button" class="carousel-dot" data-dot aria-label="Przejdź do pakietu 3"><span class="carousel-dot__bullet"></span></button>
+          </div>
+          <button type="button" class="carousel-nav-btn carousel-nav-btn--flipped" data-carousel-next aria-label="Następny pakiet">
+            <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="dark-footer" data-name="Group_2583">
+    <div class="dark-footer__sitemap">
+      <div class="dark-footer__links">
+        <a href="cennik.html">Cennik</a>
+        <a href="vision.html">Wizja</a>
+        <a href="about.html">O nas</a>
+        <a href="trusted.html">Zaufali nam</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="dark-footer__meta">
+        Administratorem strony jest
+        <a href="https://plz.coop/" target="_blank" rel="noopener">PLZ Spółdzielnia</a>
+      </p>
+      <p class="dark-footer__meta">
+        Zobacz też:
+        <a href="https://www.hub.coop/" target="_blank" rel="noopener">Centrum Technologii Spółdzielczych</a>
+      </p>
+    </div>
+
+    <div class="dark-footer__illustration">
+      <img alt="" src="/assets/6e9ed4ffbdfe1b09de596482abafada69522af29.png" />
+    </div>
+
+    <div class="dark-footer__scallop">
+      <svg viewBox="0 0 1920 86" preserveAspectRatio="none" fill="none">
+        <path d="M96 8.39894L0 25.3263V86H1920V25.3263L1824 8.39894C1760.49 -2.79965 1695.51 -2.79964 1632 8.39894C1568.49 19.5974 1503.51 19.5974 1440 8.39894C1376.49 -2.79964 1311.51 -2.79964 1248 8.39894C1184.49 19.5974 1119.51 19.5974 1056 8.39894C992.49 -2.79964 927.51 -2.79964 864 8.39894C800.49 19.5974 735.51 19.5974 672 8.39894C608.49 -2.79964 543.51 -2.79964 480 8.39894C416.49 19.5974 351.51 19.5974 288 8.39894C224.49 -2.79964 159.51 -2.79965 96 8.39894Z" fill="#F3EDFF" />
+      </svg>
+    </div>
+  </footer>
+
+  <div class="legal-bar">
+    <div class="legal-bar__content">
+      <span>© Copyright 2026 Z GO S.A. Wszelkie prawa zastrzeżone.</span>
+      <span>Polityka prywatności</span>
+      <span>Przeciwdziałanie napastowaniu i CSAM</span>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/cennik.js"></script>
+</body>
+</html>
