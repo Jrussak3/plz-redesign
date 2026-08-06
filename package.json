@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "build:singlefile": "vite build --config vite.config.singlefile.ts",
+    "build:singlefile": "vite build --config vite.config.singlefile.js",
     "dev": "vite"
   },
   "dependencies": {
