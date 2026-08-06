@@ -236,7 +236,7 @@
 
 @media (min-width: 768px) {
   .navbar {
-    padding: 0;
+    padding: 24px 32px;
   }
   .navbar__desktop,
   .navbar__links {
@@ -263,6 +263,7 @@
     position: absolute;
     height: 186px;
     justify-content: flex-end;
+    padding: 0;
   }
   .navbar__content {
     width: 1756px;
