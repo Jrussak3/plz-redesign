@@ -1,0 +1,109 @@
+/* ---------- Contact page ("Kontakt") ---------- */
+
+.contact-page {
+  background: var(--color-lilac);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 190px;
+}
+
+@media (min-width: 768px) {
+  .contact-page {
+    padding-top: 80px;
+  }
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 60px 24px;
+}
+
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 100px 24px;
+  }
+}
+
+/* ---------- Intro ---------- */
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact-intro__heading {
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-ink);
+  font-size: 28px;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .contact-intro__heading {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-intro__heading {
+    font-size: 48px;
+  }
+}
+
+/* ---------- Contact card ---------- */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+  text-align: center;
+}
+
+.contact-card__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-card__label {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-ink-50);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-card__value {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+a.contact-card__value:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    padding: 48px;
+  }
+}

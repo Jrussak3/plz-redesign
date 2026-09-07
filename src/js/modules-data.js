@@ -2,21 +2,27 @@ const ASSET = (name) => `/assets/${name}`;
 
 export const MODULE_CARDS = [
   { title: 'Tablica', description: 'Dziel się bieżącymi informacjami ze swoją społecznością, wraz z dokumentami i powiadomieniami na czas', icon: ASSET('tablica.svg') },
-  { title: 'Czat grupowy', description: 'Prowadź efektywną komunikację bez rozpraszaczy.', icon: ASSET('czat.svg') },
+  { title: 'Czaty i kanały', description: 'Prowadź efektywną komunikację bez rozpraszaczy.', icon: ASSET('czat.svg') },
   { title: 'Galeria', description: 'Przeglądaj zdjęcia udostępniane w twojej społeczności', icon: ASSET('galeria.svg') },
   { title: 'Głosowania', description: 'Przeprowadzaj sprawne głosowania, np. podczas Walnych Zgromadzeń.', icon: ASSET('glosowania.svg') },
   { title: 'Zadania', description: 'Widzisz na bieżąco, które zadania są w toku, a które już zakończone, bez konieczności pytania kogokolwiek osobiście.', icon: ASSET('zadania.svg') },
   { title: 'Załączanie pism i dokumentów', description: 'Wszystkie pisma i uchwały zostają w jednym miejscu, bez szukania w mailach czy różnych folderach', icon: ASSET('zalaczanie pism i dokumentow.svg') },
-  { title: 'Darowizny i składki członkowskie', description: 'Obsługa darowizn, składek i pobierania opłat za pomocą Autopay', icon: ASSET('darowizny.svg') },
-  { title: 'Twój sklep', description: 'Możliwość e-sklepu w ramach danej społeczności', icon: ASSET('twoj sklep.svg') },
-  { title: 'Program lojalnościowy', description: 'Obsługa dedykowanego programu lojalnościowego', icon: ASSET('program lojalnosciowy.svg') },
-  { title: 'Ankiety', description: 'Przeprowadzaj błyskawiczne sondaże wśród swojej społeczności', icon: ASSET('ankiety.svg') },
-  { title: 'Raporty z głosowań', description: 'Generuj raporty respektowane przez KRS', icon: ASSET('raporty z glosowan.svg') },
-  { title: 'Karta członkowska', description: 'Dzięki której członkowie mogą zdobywać punkty za aktywność', icon: ASSET('karta czlonkowska.svg') },
-  { title: 'Wydarzenia', description: 'Funkcje wspierające organizowanie i przeprowadzanie wydarzeń', icon: ASSET('wydarzenia.svg') },
-  { title: 'PLZ Web', description: 'Pozwala na korzystanie z PLZ zarówno na telefonie, jak i komputerze', icon: ASSET('plz web.svg') },
-  { title: 'Asystent AI', description: 'Oferujący wsparcie w kwestiach związanych z prawem pracy', icon: ASSET('asystent ai.svg') },
-  { title: 'Odkrywaj', description: 'Korzystaj z zakładki odkrywaj do promocji organizacji', icon: ASSET('odkrywaj.svg') },
+  { title: 'Darowizny i składki', description: 'Pobieraj darowizny, składki i inne opłaty', icon: ASSET('darowizny.svg') },
+  { title: 'Twój sklep', description: 'Prowadź e-sklep w ramach swojej społeczności', icon: ASSET('twoj sklep.svg') },
+  { title: 'Program lojalnościowy', description: 'Nagradzaj społeczność dedykowanym programem lojalnościowym', icon: ASSET('program lojalnosciowy.svg') },
+  { title: 'Ankiety', description: 'Przeprowadzaj błyskawiczne ankiety wśród swojej społeczności', icon: ASSET('ankiety.svg') },
+  { title: 'Raporty z głosowań', description: 'Generuj raporty akceptowane przez sądy rejestrowe (KRS)!', icon: ASSET('raporty z glosowan.svg') },
+  { title: 'Karta członkowska', description: 'Nagradzaj punktami aktywność swoich członków', icon: ASSET('karta czlonkowska.svg') },
+  { title: 'Wydarzenia', description: 'Organizuj i przeprowadzaj wydarzenia od spotkań formalnych do zapisów na warsztaty i szkolenia', icon: ASSET('wydarzenia.svg') },
+  { title: 'PLZ Web', description: 'Korzystaj z PLZ zarówno na telefonie, jak i komputerze', icon: ASSET('plz web.svg') },
+  { title: 'Asystent AI', description: 'Zyskaj wsparcie w prawie i automatyzuj codzienne zadania biurowe', icon: ASSET('asystent ai.svg') },
+  { title: 'Odkrywaj', description: 'Korzystaj z zakładki Odkrywaj do promowania artykułów, wydarzeń i swojej społeczności', icon: ASSET('odkrywaj.svg') },
+];
+
+const MOBILE_ROW_TITLES = [
+  ['Tablica', 'Głosowania', 'Załączanie pism i dokumentów', 'Ankiety', 'Raporty z głosowań', 'Odkrywaj'],
+  ['Czat grupowy', 'Zadania', 'Wydarzenia', 'Darowizny i składki', 'Twój sklep', 'Odkrywaj'],
+  ['Program lojalnościowy', 'Karta członkowska', 'PLZ Web', 'Asystent AI'],
 ];
 
 function cardMarkup(card) {
@@ -31,7 +37,16 @@ function cardMarkup(card) {
 
 export function renderModuleCards() {
   const desktopGrid = document.getElementById('modules-grid-desktop');
-  const mobileTrack = document.getElementById('modules-track-mobile');
   if (desktopGrid) desktopGrid.innerHTML = MODULE_CARDS.map(cardMarkup).join('');
-  if (mobileTrack) mobileTrack.innerHTML = MODULE_CARDS.map((c) => `<div class="modules-carousel__slide">${cardMarkup(c)}</div>`).join('');
+
+  const cardsByTitle = new Map(MODULE_CARDS.map((c) => [c.title, c]));
+  MOBILE_ROW_TITLES.forEach((titles, i) => {
+    const mobileTrack = document.getElementById(`modules-track-mobile-${i + 1}`);
+    if (!mobileTrack) return;
+    mobileTrack.innerHTML = titles
+      .map((title) => cardsByTitle.get(title))
+      .filter(Boolean)
+      .map((c) => `<div class="modules-carousel__slide">${cardMarkup(c)}</div>`)
+      .join('');
+  });
 }

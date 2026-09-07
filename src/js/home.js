@@ -47,6 +47,7 @@ function setup(id, opts) {
   });
 }
 
-setup('values-mobile', { ratio: 0.7, gap: 20 });
-setup('modules-mobile', { ratio: 0.62, gap: 12, max: 240 });
+setup('modules-mobile-1', { ratio: 0.62, gap: 12, max: 240 });
+setup('modules-mobile-2', { ratio: 0.62, gap: 12, max: 240 });
+setup('modules-mobile-3', { ratio: 0.62, gap: 12, max: 240 });
 setup('testimonials', { ratio: window.innerWidth < 768 ? 0.86 : 0.92, gap: window.innerWidth < 768 ? 20 : 80, max: 800 });

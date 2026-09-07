@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PLZ — Zaufali nam</title>
+  <title>PLZ — Kontakt</title>
   <link rel="stylesheet" href="/src/styles/base.css" />
   <link rel="stylesheet" href="/src/styles/navbar.css" />
   <link rel="stylesheet" href="/src/styles/footer.css" />
-  <link rel="stylesheet" href="/src/styles/trusted.css" />
+  <link rel="stylesheet" href="/src/styles/contact.css" />
 </head>
 <body>
   <!-- ===== Navbar ===== -->
@@ -21,15 +21,15 @@
         <div class="navbar__links" data-name="Navbar">
           <a class="navbar__link" href="vision.html">Wizja</a>
           <a class="navbar__link" href="about.html">O nas</a>
-          <a class="navbar__link is-active" href="trusted.html">Zaufali nam</a>
+          <a class="navbar__link" href="trusted.html">Zaufali nam</a>
           <a class="navbar__link" href="cennik.html">Cennik</a>
           <a class="navbar__link" href="faq.html">FAQ</a>
-          <a class="navbar__link" href="contact.html">Kontakt</a>
-          <a class="navbar__link" href="faq.html">Panel Partnera</a>
+          <a class="navbar__link is-active" href="contact.html">Kontakt</a>
+          <a class="navbar__link" href="https://partner-portal.plz.pl/#/app">Panel Partnera</a>
         </div>
         <div class="navbar__cta-row">
-          <div class="navbar__cta navbar__cta--join">Dołącz do PLZ</div>
-          <div class="navbar__cta navbar__cta--login">zaloguj się do plz web</div>
+          <a href="https://web.plz.pl/pl/register" class="navbar__cta navbar__cta--join">Dołącz do PLZ</a>
+          <a href="https://web.plz.pl/pl/l" class="navbar__cta navbar__cta--login">zaloguj się do plz web</a>
         </div>
       </div>
 
@@ -49,38 +49,41 @@
         <div class="navbar__drawer-links">
           <a class="navbar__drawer-link" href="vision.html"><span>Wizja</span></a>
           <a class="navbar__drawer-link" href="about.html"><span>O nas</span></a>
-          <a class="navbar__drawer-link is-active" href="trusted.html"><span>Zaufali nam</span></a>
+          <a class="navbar__drawer-link" href="trusted.html"><span>Zaufali nam</span></a>
           <a class="navbar__drawer-link" href="cennik.html"><span>Cennik</span></a>
           <a class="navbar__drawer-link" href="faq.html"><span>FAQ</span></a>
-          <a class="navbar__drawer-link" href="contact.html"><span>Kontakt</span></a>
-          <a class="navbar__drawer-link" href="faq.html"><span>Panel Partnera</span></a>
+          <a class="navbar__drawer-link is-active" href="contact.html"><span>Kontakt</span></a>
+          <a class="navbar__drawer-link" href="https://partner-portal.plz.pl/#/app"><span>Panel Partnera</span></a>
         </div>
         <div class="navbar__drawer-ctas">
-          <div class="navbar__cta navbar__cta--join">Dołącz do PLZ</div>
-          <div class="navbar__cta navbar__cta--login">zaloguj się do plz web</div>
+          <a href="https://web.plz.pl/pl/register" class="navbar__cta navbar__cta--join">Dołącz do PLZ</a>
+          <a href="https://web.plz.pl/pl/l" class="navbar__cta navbar__cta--login">zaloguj się do plz web</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- ===== Zaufali nam ===== -->
-  <div class="trusted-page">
-    <section class="trusted-section" data-name="Zaufali nam">
-      <div class="trusted-intro">
-        <h1 class="trusted-intro__heading">Zaufali nam</h1>
-        <p class="trusted-intro__lead">
-          Jesteśmy dumni z ugruntowanego partnerstwa ze związkami zawodowymi oraz samorządami, które zdecydowały się na
-          aplikację PLZ. Ich zaufanie to dla nas największa nagroda i motywacja do dalszego doskonalenia naszych
-          rozwiązań.
-        </p>
+  <!-- ===== Kontakt ===== -->
+  <div class="contact-page">
+    <section class="contact-section" data-name="Kontakt">
+      <div class="contact-intro">
+        <h1 class="contact-intro__heading">Skontaktuj się z nami w sprawie współpracy!</h1>
       </div>
 
-      <div class="poland-map" data-poland-map>
-        <img class="poland-map__image" alt="Mapa Polski" src="/assets/poland-map.svg" />
-        <div class="city-card" data-city-card></div>
+      <div class="contact-card">
+        <div class="contact-card__item">
+          <span class="contact-card__label">E-mail</span>
+          <a class="contact-card__value" href="mailto:plz@hub.coop">plz@hub.coop</a>
+        </div>
+        <div class="contact-card__item">
+          <span class="contact-card__label">Adres korespondencyjny</span>
+          <p class="contact-card__value">
+            PLZ Spółdzielnia<br />
+            Grażyny 13<br />
+            02-538 Warszawa
+          </p>
+        </div>
       </div>
-
-      <div class="orgs-listing" data-orgs-listing></div>
     </section>
   </div>
 
@@ -95,8 +98,8 @@
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Kontakt</a>
       </div>
-      <p class="dark-footer__meta">Administratorem strony jest <a href="https://plz.coop/" target="_blank" rel="noopener">PLZ Spółdzielnia</a><br>Od 2021 r. integrujemy polski ruch spółdzielczy i budujemy lokalną odporność.</p>
-      <p class="dark-footer__meta">Zobacz też stronę <a href="https://www.hub.coop/" target="_blank" rel="noopener">CoopTech Hub</a>,<br>czyli naszego Centrum Technologii Spółdzielczych.</p>
+      <p class="dark-footer__meta">Administratorem strony jest <a href="https://plz.coop/" target="_blank" rel="noopener">PLZ Spółdzielnia</a></p>
+      <p class="dark-footer__meta">Zobacz też: <a href="https://www.hub.coop/" target="_blank" rel="noopener">Centrum Technologii Spółdzielczych</a></p>
     </div>
     <div class="dark-footer__illustration">
       <img alt="" src="/assets/6e9ed4ffbdfe1b09de596482abafada69522af29.png" />
@@ -109,12 +112,12 @@
   </footer>
   <div class="legal-bar">
     <div class="legal-bar__content">
-      <span>© Copyright 2026 PLZ Spółdzielnia. Wszelkie prawa zastrzeżone.</span>
+      <span>© Copyright 2026 Z GO S.A. Wszelkie prawa zastrzeżone.</span>
       <span>Polityka prywatności</span>
       <span>Przeciwdziałanie napastowaniu i CSAM</span>
     </div>
   </div>
 
-  <script type="module" src="/src/js/trusted.js"></script>
+  <script type="module" src="/src/js/contact.js"></script>
 </body>
 </html>
