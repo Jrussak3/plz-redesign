@@ -35,6 +35,13 @@
   max-width: 900px;
 }
 
+.hero__heading .gradient-text {
+  background: linear-gradient(to right, #bf96c5, #4700c3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero__lead {
   font-weight: 500;
   line-height: 1.25;
