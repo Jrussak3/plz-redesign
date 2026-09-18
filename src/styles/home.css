@@ -157,29 +157,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
 }
 .honest-model__copy {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   text-align: center;
 }
 .honest-model__copy p {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
   text-align: left;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.55;
   color: var(--color-ink-75);
 }
 .honest-model__bullet {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bf96c5, #4700c3);
+  color: #fffbff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
 }
 .honest-model__heading .gradient-text {
   background: linear-gradient(to right, #bf96c5, #4700c3);
@@ -205,12 +213,20 @@
   }
   .honest-model__copy {
     flex: 1;
+    gap: 32px;
     text-align: left;
   }
   .honest-model__heading {
     font-size: 56px;
   }
   .honest-model__copy p {
+    font-size: 24px;
+    line-height: 1.5;
+    gap: 20px;
+  }
+  .honest-model__bullet {
+    width: 40px;
+    height: 40px;
     font-size: 20px;
   }
   .honest-model__illustration {
@@ -365,11 +381,19 @@
   height: 36px;
   flex-shrink: 0;
 }
+.module-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .module-card__title {
   font-weight: 600;
   font-size: 11px;
   color: var(--color-ink);
   line-height: 1.25;
+}
+.module-card__tooltip {
+  display: contents;
 }
 .module-card__description {
   font-weight: 400;
@@ -380,10 +404,7 @@
 
 .module-cards-grid {
   display: none;
-  flex-wrap: wrap;
   gap: 40px 20px;
-  align-items: flex-start;
-  justify-content: center;
   max-width: 1550px;
   width: 100%;
 }
@@ -474,19 +495,66 @@
     gap: 80px;
   }
   .module-cards-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 150px));
+    justify-content: center;
   }
   .modules-carousel {
     display: none;
   }
-  .module-card {
-    min-height: 264px;
-    padding: 24px;
+  .module-cards-grid .module-card {
+    position: relative;
+    height: 150px;
+    width: auto;
+    padding: 16px 8px;
+    gap: 10px;
   }
-  .module-card__title {
-    font-size: 16px;
+  .module-cards-grid .module-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
   }
-  .module-card__description {
+  .module-cards-grid .module-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .module-cards-grid .module-card__title {
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .module-cards-grid .module-card__tooltip {
+    display: block;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    --tooltip-shift: 0px;
+    transform: translateX(calc(-50% + var(--tooltip-shift))) translateY(4px);
+    width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+    padding: 14px 16px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 10;
+  }
+  .module-cards-grid .module-card:hover .module-card__tooltip,
+  .module-cards-grid .module-card:focus .module-card__tooltip,
+  .module-cards-grid .module-card:focus-within .module-card__tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(calc(-50% + var(--tooltip-shift))) translateY(0);
+    pointer-events: auto;
+  }
+  .module-cards-grid .module-card__description {
     font-size: 14px;
   }
 }
@@ -816,6 +884,13 @@
   line-height: 1.25;
   color: #fff;
 }
+.download-banner__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
 
 @media (min-width: 640px) {
   .pricing-cta__headline h2 {
@@ -833,6 +908,9 @@
   }
   .download-banner__mobile-cta {
     display: none;
+  }
+  .download-banner__description {
+    text-align: left;
   }
 }
 
@@ -1082,8 +1160,12 @@
   max-width: 700px;
 }
 .community-pricing-highlight {
+  display: inline-block;
   font-weight: 700;
-  color: var(--color-red-cta);
+  color: #fff;
+  background: var(--color-ink);
+  padding: 8px 16px;
+  border-radius: 100px;
 }
 .community-pricing-copy .gradient-text {
   background: linear-gradient(to right, #bf96c5, #4700c3);
