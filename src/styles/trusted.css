@@ -1,0 +1,201 @@
+/* ---------- Trusted page ("Zaufali nam") ---------- */
+
+.trusted-page {
+  background: var(--color-lilac);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 190px;
+}
+
+@media (min-width: 768px) {
+  .trusted-page {
+    padding-top: 80px;
+  }
+}
+
+.trusted-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 60px 24px;
+}
+
+@media (min-width: 768px) {
+  .trusted-section {
+    padding: 100px 24px;
+  }
+}
+
+/* ---------- Intro ---------- */
+.trusted-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.trusted-intro__heading {
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-ink);
+  font-size: 28px;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .trusted-intro__heading {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .trusted-intro__heading {
+    font-size: 48px;
+  }
+}
+
+.trusted-intro__lead {
+  font-weight: 400;
+  line-height: 1.5;
+  color: #707070;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .trusted-intro__lead {
+    font-size: 18px;
+  }
+}
+
+/* ---------- Poland map ---------- */
+.poland-map {
+  position: relative;
+  display: none;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 646.47 / 555.32;
+}
+
+@media (min-width: 768px) {
+  .poland-map {
+    display: block;
+  }
+}
+
+.poland-map__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each city dot is an absolutely-positioned button, placed by JS via left/top
+   percentages derived from the map's viewBox coordinates. */
+.city-dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+}
+
+.city-dot__marker {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--color-red-cta);
+  transition: transform 0.15s ease;
+}
+
+.city-dot.is-active .city-dot__marker {
+  transform: scale(1.6);
+}
+
+/* Popup card shown near the active city dot (desktop only). Positioned by JS. */
+.city-card {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  max-width: min(420px, 90vw);
+  border-radius: 12px;
+  background: var(--color-white);
+  padding: 12px;
+  box-shadow: 0px 3px 10px 0px rgba(51, 51, 51, 0.35);
+}
+
+.city-card.is-visible {
+  display: flex;
+}
+
+/* ---------- Org card (shared by the popup card and the flat listing) ---------- */
+.org-card {
+  display: flex;
+  width: 130px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.org-card--card {
+  box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.3);
+}
+
+.org-card--listing {
+  flex-shrink: 0;
+  box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.3);
+}
+
+.org-card__logo-wrap {
+  display: flex;
+  height: 90px;
+  width: 90px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.org-card__logo {
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.org-card__name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+/* ---------- Flat org listing (mobile + desktop) ---------- */
+.orgs-listing {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}

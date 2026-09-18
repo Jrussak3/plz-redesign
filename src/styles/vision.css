@@ -1,0 +1,171 @@
+/* ---------- Vision page ---------- */
+
+.vision-page {
+  background: var(--color-lilac);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* clears the fixed Navbar (it grows with viewport width, up to 186px at 1800px+) */
+  padding-top: 190px;
+}
+
+@media (min-width: 768px) {
+  .vision-page {
+    padding-top: 80px;
+  }
+}
+
+.vision {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 24px 12px 64px;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+@media (min-width: 768px) {
+  .vision {
+    gap: 80px;
+    padding: 64px 64px 64px;
+  }
+}
+
+/* ---------- Row / cell layout ---------- */
+
+.vision-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .vision-row {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+.vision-row__cell {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .vision-row__cell {
+    padding: 24px;
+  }
+}
+
+.vision-row__cell--image {
+  min-width: 0;
+}
+
+.vision-row__cell--copy {
+  flex-direction: column;
+}
+
+.vision-row__image {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .vision-row__image {
+    max-width: none;
+  }
+}
+
+/* ---------- Statement row ---------- */
+
+.vision-statement {
+  word-break: break-word;
+  font-weight: 400;
+  color: var(--color-ink);
+  font-size: 28px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .vision-statement {
+    font-size: 42px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vision-statement {
+    font-size: 52px;
+  }
+}
+
+/* ---------- Copy row ---------- */
+
+.vision-copy {
+  word-break: break-word;
+  font-weight: 400;
+  color: var(--color-ink);
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .vision-copy {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vision-copy {
+    font-size: 22px;
+  }
+}
+
+.vision-claim {
+  word-break: break-word;
+  font-weight: 700;
+  color: var(--color-ink);
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .vision-claim {
+    font-size: 28px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vision-claim {
+    font-size: 32px;
+  }
+}
+
+.vision-claim__highlight {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(180deg, #fff5ad, #fff5ad 150%);
+  background-repeat: no-repeat;
+  background-size: 100% 45%;
+  background-position: 0% 85%;
+}

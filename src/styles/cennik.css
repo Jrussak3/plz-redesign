@@ -1,0 +1,349 @@
+/* ---------- Cennik page ---------- */
+.cennik-page {
+  background: var(--color-lilac);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* clears the fixed navbar, which grows with viewport width up to 186px at 1800px+ */
+  padding-top: 190px;
+}
+
+@media (min-width: 768px) {
+  .cennik-page {
+    padding-top: 80px;
+  }
+}
+
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  padding: 60px 24px;
+}
+
+@media (min-width: 768px) {
+  .pricing-section {
+    padding: 100px 24px;
+  }
+}
+
+.pricing-heading {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.25;
+  text-align: center;
+  word-break: break-word;
+}
+.pricing-heading__ink {
+  color: var(--color-ink);
+}
+.pricing-heading .gradient-text {
+  background: linear-gradient(to right, #bf96c5, #4700c3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 640px) {
+  .pricing-heading {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .pricing-heading {
+    font-size: 48px;
+  }
+}
+
+/* ---------- Plan card ---------- */
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  box-shadow: 0px 10px 30px 0px rgba(103, 80, 164, 0.15);
+}
+
+.plan-card--featured {
+  border: 3px solid var(--color-red);
+  box-shadow: 0px 20px 40px 0px rgba(103, 80, 164, 0.25);
+  overflow: hidden;
+}
+
+.plan-card__badge {
+  flex-shrink: 0;
+  background: var(--color-red);
+  padding: 14px 16px;
+  text-align: center;
+}
+.plan-card__badge p {
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.plan-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 24px;
+}
+.plan-card--featured .plan-card__body {
+  border-radius: 0 0 21px 21px;
+}
+
+.plan-card__body--podstawowy {
+  background: linear-gradient(to bottom right, #f5dd8f, #dcbcbf, #c6a4c9);
+}
+.plan-card__body--pro {
+  background: linear-gradient(to bottom, #ece4f7, #ddd1ef);
+}
+.plan-card__body--indywidualny {
+  background: linear-gradient(to bottom, #e2d5ef, #f2ecfa);
+}
+
+.plan-card__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.plan-card__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+.plan-card__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.plan-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.plan-card__price-main {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--color-ink);
+}
+.plan-card__price-suffix {
+  font-weight: 600;
+  font-size: 16px;
+}
+.plan-card__price-note {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-ink);
+}
+
+.plan-card__features {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-ink-10);
+}
+.feature-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.feature-row__label {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+.feature-icon {
+  flex-shrink: 0;
+}
+.feature-pill {
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--color-white);
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--color-ink);
+  text-align: center;
+  box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.3);
+  white-space: nowrap;
+}
+
+.plan-card__cta {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--color-ink);
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-white);
+  transition: background-color 0.2s ease;
+}
+.plan-card__cta:hover {
+  background: var(--color-accent-darker);
+}
+
+/* ---------- Desktop plan row ---------- */
+.pricing-row {
+  display: none;
+  width: 100%;
+  max-width: 1300px;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+}
+.pricing-row .plan-card {
+  width: 100%;
+  max-width: 380px;
+  flex: 1;
+}
+.pricing-row .plan-card--featured {
+  transform: translateY(-16px);
+}
+
+/* ---------- Mobile peek carousel ---------- */
+.pricing-carousel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.pricing-carousel__viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 0;
+}
+.pricing-carousel__track {
+  display: flex;
+  align-items: stretch;
+}
+.pricing-carousel__slide {
+  flex-shrink: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.pricing-carousel__slide .plan-card {
+  width: 100%;
+  height: 100%;
+}
+.pricing-carousel__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.pricing-carousel__slide.is-peek {
+  opacity: 0.5;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.pricing-carousel__slide.is-peek:hover {
+  opacity: 0.75;
+}
+.pricing-carousel__slide.is-hidden {
+  opacity: 0;
+  transform: scale(0.75);
+  pointer-events: none;
+}
+.pricing-carousel__slide.is-instant {
+  transition-duration: 0s;
+}
+
+/* ---------- Shared carousel controls (nav buttons + dots) ---------- */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.carousel-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: var(--color-accent);
+  transition: background-color 0.2s ease;
+}
+.carousel-nav-btn:hover {
+  background: var(--color-accent-dark);
+}
+.carousel-nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.carousel-nav-btn--flipped svg {
+  transform: rotate(180deg);
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.carousel-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 30px;
+  padding: 0 4px;
+}
+.carousel-dot__bullet {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background: var(--color-accent);
+  transition: all 0.3s ease;
+}
+.carousel-dot__bullet::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  border: 2px solid var(--color-white);
+  pointer-events: none;
+}
+.carousel-dot:hover .carousel-dot__bullet {
+  background: var(--color-accent-dark);
+}
+.carousel-dot.is-active .carousel-dot__bullet {
+  width: 30px;
+  height: 30px;
+}
+
+/* ---------- Responsive: swap desktop row for mobile carousel ---------- */
+@media (min-width: 768px) {
+  .pricing-row {
+    display: flex;
+  }
+  .pricing-carousel {
+    display: none;
+  }
+}

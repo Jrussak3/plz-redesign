@@ -1,22 +1,371 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLZ — Polska spółdzielcza aplikacja</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/navbar.css" />
+  <link rel="stylesheet" href="/src/styles/footer.css" />
+  <link rel="stylesheet" href="/src/styles/home.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" data-name="Navbar">
+    <div class="navbar__content">
+      <a href="index.html" class="navbar__logo" aria-label="PLZ — strona główna">
+        <img src="/assets/plz-logo.svg" alt="PLZ" width="140" height="140" />
+      </a>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>PLZ</title>
-      <meta name="description" content="Delivers a precise digital replica of original designs, enabling users to visualize and interact with accurate prototypes for seamless project development." />
-      <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+      <div class="navbar__desktop">
+        <div class="navbar__links" data-name="Navbar">
+          <a class="navbar__link" href="vision.html">Wizja</a>
+          <a class="navbar__link" href="about.html">O nas</a>
+          <a class="navbar__link" href="trusted.html">Zaufali nam</a>
+          <a class="navbar__link" href="cennik.html">Cennik</a>
+          <a class="navbar__link" href="faq.html">FAQ</a>
+          <a class="navbar__link" href="contact.html">Kontakt</a>
+          <a class="navbar__link" href="https://partner-portal.plz.pl/#/app">Panel Partnera</a>
+        </div>
+        <div class="navbar__cta-row">
+          <a href="https://web.plz.pl/pl/register" class="navbar__cta navbar__cta--join">Dołącz do PLZ</a>
+          <a href="https://web.plz.pl/pl/l" class="navbar__cta navbar__cta--login">zaloguj się do plz web</a>
+        </div>
+      </div>
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+      <button type="button" class="navbar__menu-btn" data-navbar-open aria-expanded="false" aria-label="Menu">
+        <span class="menu-icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="navbar__mobile-panel" data-navbar-panel aria-hidden="true">
+      <div class="navbar__overlay" data-navbar-overlay></div>
+      <div class="navbar__drawer">
+        <div class="navbar__drawer-close">
+          <button type="button" class="navbar__menu-btn" data-navbar-close aria-label="Zamknij menu">
+            <span class="menu-icon menu-icon--open"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+        <div class="navbar__drawer-links">
+          <a class="navbar__drawer-link" href="vision.html"><span>Wizja</span></a>
+          <a class="navbar__drawer-link" href="about.html"><span>O nas</span></a>
+          <a class="navbar__drawer-link" href="trusted.html"><span>Zaufali nam</span></a>
+          <a class="navbar__drawer-link" href="cennik.html"><span>Cennik</span></a>
+          <a class="navbar__drawer-link" href="faq.html"><span>FAQ</span></a>
+          <a class="navbar__drawer-link" href="contact.html"><span>Kontakt</span></a>
+          <a class="navbar__drawer-link" href="https://partner-portal.plz.pl/#/app"><span>Panel Partnera</span></a>
+        </div>
+        <div class="navbar__drawer-ctas">
+           <a href="https://web.plz.pl/pl/register" class="navbar__cta navbar__cta--join">Dołącz do PLZ</a>
+          <a href="https://web.plz.pl/pl/l" class="navbar__cta navbar__cta--login">zaloguj się do plz web</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="hero__content">
+      <div class="hero__copy">
+        <h1 class="hero__heading">Polska spółdzielcza aplikacja dla <span class="gradient-text">Twojej organizacji</span></h1>
+        <p class="hero__lead">Wszystkie narzędzia wspierające działanie w jednym miejscu. Pomożemy Ci zbudować społeczność i usprawnić codzienne zarządzanie organizacją.</p>
+      </div>
+      <div class="hero__buttons">
+        <a href="#community-pricing" class="pill-button pill-button--red">Pobierz za darmo</a>
+        <a href="contact.html" class="pill-button pill-button--white">Umów się na spotkanie</a>
+      </div>
+    </div>
+    <div class="hero__illustration">
+      <img class="is-mobile" alt="" src="/assets/city_background_hero.png" />
+      <img class="is-desktop" alt="" src="/assets/city_background_hero.png" />
+    </div>
+  </header>
+
+  <!-- ===== Moduły grid ===== -->
+  <section class="moduly-grid-section">
+    <div class="community-intro">
+      <h2 class="community-intro__heading">Twoja <span class="gradient-text">społeczność</span> <span class="accent-text">w jednym miejscu</span></h2>
+      <p class="community-intro__lead">W PLZ masz wszystko pod ręką: narzędzia do komunikacji i aktywizacji Twojej społeczności, bramki płatnicze, głosowania czy nawet Asystenta AI.</p>
+    </div>
+
+    <div class="module-cards-grid" id="modules-grid-desktop"></div>
+
+    <div class="modules-carousel" data-carousel-wrapper>
+      <div class="modules-carousel__viewport" data-carousel="modules-mobile-1">
+        <div class="modules-carousel__track" data-carousel-track id="modules-track-mobile-1"></div>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-nav-btn" data-carousel-prev aria-label="Poprzedni moduł">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+        <button type="button" class="carousel-nav-btn carousel-nav-btn--flipped" data-carousel-next aria-label="Następny moduł">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="modules-carousel" data-carousel-wrapper>
+      <div class="modules-carousel__viewport" data-carousel="modules-mobile-2">
+        <div class="modules-carousel__track" data-carousel-track id="modules-track-mobile-2"></div>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-nav-btn" data-carousel-prev aria-label="Poprzedni moduł">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+        <button type="button" class="carousel-nav-btn carousel-nav-btn--flipped" data-carousel-next aria-label="Następny moduł">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="modules-carousel" data-carousel-wrapper>
+      <div class="modules-carousel__viewport" data-carousel="modules-mobile-3">
+        <div class="modules-carousel__track" data-carousel-track id="modules-track-mobile-3"></div>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-nav-btn" data-carousel-prev aria-label="Poprzedni moduł">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+        <button type="button" class="carousel-nav-btn carousel-nav-btn--flipped" data-carousel-next aria-label="Następny moduł">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Values ===== -->
+  <section class="values">
+    <div class="values__inner">
+      <h2 class="honest-model__heading">Uczciwy <span class="gradient-text">model biznesowy</span></h2>
+      <div class="honest-model">
+        <div class="honest-model__copy">
+          <p><span class="honest-model__bullet">1</span>Twoja organizacja płaci abonament. My dajemy pełną niezależność od cyfrowych gigantów.</p>
+          <p><span class="honest-model__bullet">2</span>Nie zbieramy danych dla reklam i nie stosujemy toksycznych algorytmów.</p>
+          <p><span class="honest-model__bullet">3</span>Rozwijamy polską, spółdzielczą myśl techniczną.</p>
+          <p><span class="honest-model__bullet">4</span>Twoje dane przetwarzamy wyłącznie w zaufanej chmurze obliczeniowej na terytorium Polski.</p>
+        </div>
+        <div class="honest-model__illustration">
+          <img src="/assets/uczciwy_model_biznesowy.png" alt="Uczciwy model biznesowy PLZ" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Persona switcher ===== -->
+  <section class="persona-section">
+    <h2 class="persona-heading">Jak nasi <span class="gradient-text">klienci</span> korzystają z <span class="accent-text">PLZ?</span></h2>
+    <div class="persona-cards">
+      <div class="persona-list">
+        <button type="button" class="persona-btn is-active" data-persona-btn="adam" aria-pressed="true">Adam, Związkowiec</button>
+        <button type="button" class="persona-btn" data-persona-btn="piotr" aria-pressed="false">Piotr, Samorządowiec</button>
+        <button type="button" class="persona-btn" data-persona-btn="teresa" aria-pressed="false">Teresa, Spółdzielczyni</button>
+        <button type="button" class="persona-btn" data-persona-btn="monika" aria-pressed="false">Monika, Działaczka społeczna</button>
+        <button type="button" class="persona-btn" data-persona-btn="ewa" aria-pressed="false">Ewa, Mieszkanka osiedla</button>
+      </div>
+
+      <div class="persona-detail" data-persona-detail>
+        <div data-persona-panel="adam">
+          <div class="persona-detail__header">
+            <div class="persona-detail__avatar"><img alt="Adam" src="/assets/Adam.svg" /></div>
+            <div><p class="persona-detail__name">Adam</p><p class="persona-detail__role">Związkowiec</p></div>
+          </div>
+          <div class="persona-detail__paragraphs">
+            <p>Adam na co dzień walczy o prawa pracowników, ale formalności i komunikacja w Związku się dla niego drugim etatem.</p>
+            <p>Adam stworzył na PLZ wirtualną tablicę związkową. Teraz publikuje komunikaty, które dzięki dedykowanym czatom i powiadomieniom push trafiają prosto na telefony członków. Funkcja zadań i projektów usprawniła działanie organizacji, a zintegrowane głosowania dały związkowcom realny wpływ na decyzje. Dodatkowo wbudowany system płatności w pełni zautomatyzował i zabezpieczył proces zbierania składek członkowskich.</p>
+            <p>Dzięki PLZ Adam zyskał nowoczesne narzędzie do sprawnego zarządzania organizacją, a związek – silną, cyfrową tożsamość.</p>
+          </div>
+        </div>
+        <div data-persona-panel="piotr" hidden>
+          <div class="persona-detail__header">
+            <div class="persona-detail__avatar"><img alt="Piotr" src="/assets/Piotr.svg" /></div>
+            <div><p class="persona-detail__name">Piotr</p><p class="persona-detail__role">Samorządowiec</p></div>
+          </div>
+          <div class="persona-detail__paragraphs">
+            <p>Piotr wie, że sercem każdej gminy są jej mieszkańcy i lokalny biznes.</p>
+            <p>Dzięki tablicy na PLZ i kalendarzowi wydarzeń, gmina natychmiast dociera do mieszkańców, klientów i turystów bez wydatków na kampanie reklamowe. Respektowane w KRS głosowania stały się prostym narzędziem do błyskawicznych konsultacji społecznych, dzięki którym mieszkańcy czują się docenieni. Zintegrowana bramka płatnicza pozwoliła na wygodne rozliczanie opłat lokalnych, biletów parkingowych czy komunikacyjnych, a karta mieszkańca z systemem punktowym zmotywowała ludzi do zostawiania pieniędzy u lokalnych partnerów.</p>
+            <p>Dzięki PLZ pieniądz zostaje lokalnie. Biznes zamiast używać zachodnich platform do promocji, współpracuje z miastem, przynosząc realne zyski.</p>
+          </div>
+        </div>
+        <div data-persona-panel="teresa" hidden>
+          <div class="persona-detail__header">
+            <div class="persona-detail__avatar"><img alt="Teresa" src="/assets/Teresa.svg" /></div>
+            <div><p class="persona-detail__name">Teresa</p><p class="persona-detail__role">Spółdzielczyni</p></div>
+          </div>
+          <div class="persona-detail__paragraphs">
+            <p>Budowanie lojalności klientów w świecie zdominowanym przez korporacyjne giganty wymagało od Teresy narzędzi, na które mały biznes rzadko może sobie pozwolić.</p>
+            <p>Teresa wprowadziła swoją spółdzielnię do aplikacji PLZ. Ta niezależna przestrzeń cyfrowa dała jej zintegrowany system komunikacji i płatności w jednym miejscu. Dzięki bezpiecznej bramce płatniczej i funkcji PolCard Go, może przyjmować płatności zbliżeniowe telefonem. Codzienna komunikacja na czacie grupowym toczy się bez rozpraszaczy, a wbudowany system głosowań pozwolił prowadzić Walne Zgromadzenia online.</p>
+            <p>Dzięki PLZ Teresa zjednoczyła i wzmocniła swoją spółdzielnię, budując silny, lojalny ekosystem wokół swojego biznesu.</p>
+          </div>
+        </div>
+        <div data-persona-panel="monika" hidden>
+          <div class="persona-detail__header">
+            <div class="persona-detail__avatar"><img alt="Monika" src="/assets/Monika.svg" /></div>
+            <div><p class="persona-detail__name">Monika</p><p class="persona-detail__role">Działaczka społeczna</p></div>
+          </div>
+          <div class="persona-detail__paragraphs">
+            <p>Monika koordynuje zbiórki, organizuje wolontariuszy, rozmawia z lokalnym biznesem i samorządem, ale komunikacja małej organizacji ginie w informacyjnym chaosie.</p>
+            <p>Dzięki PLZ publikuje kluczowe komunikaty na tablicy ogłoszeniowej, mając pewność, że dotrą do całej społeczności. Projekty omawia na dedykowanych czatach bez rozpraszaczy, a lokalne potrzeby bada za pomocą błyskawicznych głosowań. Wbudowany system płatności automatyzuje zbieranie składek i zrzutek, a wirtualna karta lojalnościowa pozwala jej odwdzięczyć się wolontariuszom.</p>
+            <p>Monika może się skupić na tym, co najważniejsze. Realną pomoc i budowanie silnej, lokalnej społeczności.</p>
+          </div>
+        </div>
+        <div data-persona-panel="ewa" hidden>
+          <div class="persona-detail__header">
+            <div class="persona-detail__avatar"><img alt="Ewa" src="/assets/Ewa.svg" /></div>
+            <div><p class="persona-detail__name">Ewa</p><p class="persona-detail__role">Mieszkanka osiedla</p></div>
+          </div>
+          <div class="persona-detail__paragraphs">
+            <p>Ewa chciała stworzyć przestrzeń, w której każdy z jej osiedla poczuje się bezpiecznie i zyska realny głos, tymczasem grupy na mediach społecznościowych były pełne anonimowego hejtu, fake newsów i reklam.</p>
+            <p>Stworzenie prywatnej społeczności na PLZ zagwarantowało, że każda informacja pochodzi od zweryfikowanego autora. Dzięki tablicy i kalendarzowi wydarzeń, mieszkańcy zawsze wiedzą, co dzieje się w okolicy. Dedykowane czaty stały się cyfrowym odbiciem spotkań twarzą w twarz. Z kolei szybkie głosowania pozwoliły wspólnie decydować o losach osiedla, a wirtualna karta mieszkańca z systemem punktowym zmobilizowała lokalne firmy do wspierania sąsiedzkich inicjatyw.</p>
+            <p>Dzięki plz Ewa stworzyła nowoczesne, prawdziwie inkluzywne osiedle, gdzie technologia buduje realne więzi zamiast dzielić.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pricing CTA ===== -->
+  <section class="pricing-cta" id="community-pricing">
+    <div class="pricing-cta__headline">
+      <h2>Dołącz do społeczności lub <span class="gradient-text">stwórz własną</span></h2>
+      <p>PLZ jest w 100% darmowy dla członków społeczności i oferuje pełen pakiet możliwości dla liderów.</p>
+    </div>
+
+    <div class="choice-cards">
+      <div class="choice-card choice-card--lilac">
+        <div>
+          <p class="choice-card__title">Chcę dołączyć do społeczności</p>
+          <p class="choice-card__description">Bądź w kontakcie z ludźmi i korzystaj ze wszystkich funkcji społecznościowych <strong>całkowicie za darmo</strong>.</p>
+        </div>
+        <a href="https://web.plz.pl/" class="choice-card__button">Zarejestruj się w PLZ</a>
+      </div>
+      <div class="choice-card choice-card--peach">
+        <div>
+          <p class="choice-card__title">Chcę założyć własną społeczność</p>
+          <p class="choice-card__description"><strong>Rozwijaj potencjał swojej społeczności</strong> i dopasuj aplikację do swoich potrzeb we współpracy z PLZ.</p>
+        </div>
+        <a href="contact.html" class="choice-card__button">Skontaktuj się, aby rozpocząć darmowy miesiąc próbny</a>
+      </div>
+    </div>
+
+    <div class="download-banner">
+      <div class="download-banner__qr"><img alt="Kod QR do pobrania aplikacji" src="/assets/qr_cth.jpg" /></div>
+      <div class="download-banner__copy">
+        <h3>Dołącz do otwartej darmowej społeczności CoopTech Hub</h3>
+        <p class="download-banner__description">Jeśli nie masz aplikacji, skierujemy cię do sklepu Google Play lub App Store</p>
+        <a class="download-banner__mobile-cta" href="https://link.plz.pl/ZXnvEsjzjsoNGyZi8?title=CoopTech+Hub">Kliknij tutaj</a>
+        <div class="store-badges">
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.zgosa.joy&hl=pl" target="_blank" rel="noopener"><img alt="Pobierz z Google Play" src="/assets/6fceb9f2cb82d2c00b27de567752c78e974f6807.png" /></a>
+          <a class="store-badge store-badge--apple" href="https://apps.apple.com/pl/app/plz/id1486750268?l=pl" target="_blank" rel="noopener">
+            <span class="store-badge__eyebrow">Dostępne w</span>
+            <span class="store-badge__title">App Store</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="testimonials">
+    <h2 class="testimonials__heading">Zobacz, jak inni <span class="gradient-text">zyskali</span> dzięki PLZ</h2>
+
+    <div class="testimonials-carousel" data-carousel-wrapper>
+      <div class="testimonials-carousel__viewport" data-carousel="testimonials">
+        <div class="testimonials-carousel__track" data-carousel-track>
+          <div class="testimonial-card">
+            <div class="testimonial-card__paragraphs">
+              <p>Zarządzanie ogólnopolskim stowarzyszeniem branżowym takim jak Polska Sieć Ekonomii wymaga częstego używania narzędzi cyfrowych. Przy około 100 członków rozproszonych po wszystkich polskich miastach akademickich, komunikacja, wymiana prac naukowych oraz spotkania muszą odbywać się zdalnie. Stosowane dotychczas technologie stały się zawodne - niedopasowane do działań stowarzyszenia rejestrowego, wymagające opłat jak dla korporacji, zbyt ciężkie i przeładowane.</p>
+              <p>Dzięki PLZ stowarzyszenie ma jeden prosty kanał komunikacji, którym dostarczane są najważniejsze informacje. W PLZ pojawiają się zawiadomienia o Walnych Zgromadzeniach i prowadzone są zdalne głosowania. Z punktu widzenia oszczędności pracy, korzyść z aplikacji PLZ jest oczywista.</p>
+            </div>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__logo" style="width:64px;height:64px"><img alt="" src="/assets/dff59f9add33f17deb16905203fc8a27faaa7a2f.png" /></div>
+              <p class="testimonial-card__name">Polska Sieć Ekonomii</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__paragraphs">
+              <p>Pandemia COVID-19 uświadomiła wszystkim, że cyfryzacja to nie tylko dodatek do sprawdzonych procesów, ale konieczność w świecie XXI wieku. Nie inaczej było w przypadku Ogólnopolskiego Porozumienia Związków Zawodowych – największej w Polsce centrali związkowej, która mierzyła się z trudnościami związanymi z zamykaniem zakładów, koniecznością przeprowadzania spotkań oraz głosowań w formie zdalnej i zmianą metod komunikacji.</p>
+              <p>Aplikacja PLZ stała się nową „wirtualną tablicą związkową” dla ok. 30 ogólnopolskich związków zawodowych z branż od przemysłu, przez handel i usługi aż po administrację publiczną. Związki zawodowe komunikują się w PLZ, pobierają składki członkowskie, głosują i działają w bezpiecznej, zaufanej przestrzeni w której dane należą do nich.</p>
+            </div>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__logo" style="width:67px;height:64px"><img alt="" src="/assets/5847848ba298061f4994915c175a75057017a7b9.png" /></div>
+              <p class="testimonial-card__name">Ogólnopolskie Porozumienie<br />Związków Zawodowych</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__paragraphs">
+              <p>Fundacja Wolne Miejsce od lat organizuje jedne z największych w Polsce Śniadań Wielkanocnych i Wigilii dla samotnych i potrzebujących. W 2020 roku pandemia uniemożliwiła tradycyjne spotkania, więc zdecydowano się na mobilną wersję wydarzenia za pośrednictwem aplikacji PLZ. Wolontariusze dołączali do społeczności fundacji poprzez aplikację, znajdowali informacje i zadania, a dzięki czatowi utrzymywali stały kontakt z koordynatorami.</p>
+              <p>Dzięki PLZ dostarczanie paczek z żywnością i upominkami dla potrzebujących stało się bardziej efektywne. Po akcji na czacie grupowym pojawiało się wiele pozytywnych komunikatów, a organizacja kolejnych edycji Śniadań Wielkanocnych i Wigilii była znacznie ułatwiona dzięki zbudowanej bazie wolontariuszy. Aplikacja PLZ umożliwiła skuteczne koordynowanie działań dla ponad tysiąca wolontariuszy, co przyczyniło się do usprawnienia dostaw paczek do kilkunastu tysięcy domów.</p>
+            </div>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__logo" style="width:100px;height:64px"><img alt="" src="/assets/dd7e5ae7c8acf304feeecb5d167dc80fc07c54ad.png" /></div>
+              <p class="testimonial-card__name">Fundacja wolne miejsce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-nav-btn" data-carousel-prev aria-label="Poprzednia opinia">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+        <div class="carousel-dots" data-carousel-dots>
+          <button type="button" class="carousel-dot" data-dot aria-label="Przejdź do opinii 1"><span class="carousel-dot__bullet"></span></button>
+          <button type="button" class="carousel-dot" data-dot aria-label="Przejdź do opinii 2"><span class="carousel-dot__bullet"></span></button>
+          <button type="button" class="carousel-dot" data-dot aria-label="Przejdź do opinii 3"><span class="carousel-dot__bullet"></span></button>
+        </div>
+        <button type="button" class="carousel-nav-btn carousel-nav-btn--flipped" data-carousel-next aria-label="Następna opinia">
+          <svg fill="none" viewBox="0 0 24 24"><path d="M15 18L9 12L15 6" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="community-pricing" id="community-pricing-banner">
+    <div class="community-pricing-card">
+      <div class="community-pricing-copy">
+        <p><span class="community-pricing-highlight">Pierwszy miesiąc za darmo!</span></p>
+        <h2>Twoja społeczność w PLZ już od <span class="gradient-text">80 zł miesięcznie</span></h2>
+        <a href="cennik.html" class="pill-button">
+          <span class="pill-button__fill"></span>
+          <span class="pill-button__label">Zobacz cennik</span>
+        </a>
+      </div>
+      <div class="community-pricing-illustration">
+        <img alt="" src="/assets/Illustration.png" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="dark-footer" data-name="Group_2583">
+    <div class="dark-footer__sitemap">
+      <div class="dark-footer__links">
+        <a href="cennik.html">Cennik</a>
+        <a href="vision.html">Wizja</a>
+        <a href="about.html">O nas</a>
+        <a href="trusted.html">Zaufali nam</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+      <p class="dark-footer__meta">Administratorem strony jest <a href="https://plz.coop/" target="_blank" rel="noopener">PLZ Spółdzielnia</a><br>Od 2021 r. integrujemy polski ruch spółdzielczy i budujemy lokalną odporność.</p>
+      <p class="dark-footer__meta">Zobacz też stronę <a href="https://www.hub.coop/" target="_blank" rel="noopener">CoopTech Hub</a>,<br>czyli naszego Centrum Technologii Spółdzielczych.</p>
+    </div>
+    <div class="dark-footer__illustration">
+      <img alt="" src="/assets/6e9ed4ffbdfe1b09de596482abafada69522af29.png" />
+    </div>
+    <div class="dark-footer__scallop">
+      <svg viewBox="0 0 1920 86" preserveAspectRatio="none" fill="none">
+        <path d="M96 8.39894L0 25.3263V86H1920V25.3263L1824 8.39894C1760.49 -2.79965 1695.51 -2.79964 1632 8.39894C1568.49 19.5974 1503.51 19.5974 1440 8.39894C1376.49 -2.79964 1311.51 -2.79964 1248 8.39894C1184.49 19.5974 1119.51 19.5974 1056 8.39894C992.49 -2.79964 927.51 -2.79964 864 8.39894C800.49 19.5974 735.51 19.5974 672 8.39894C608.49 -2.79964 543.51 -2.79964 480 8.39894C416.49 19.5974 351.51 19.5974 288 8.39894C224.49 -2.79964 159.51 -2.79965 96 8.39894Z" fill="#F3EDFF" />
+      </svg>
+    </div>
+  </footer>
+  <div class="legal-bar">
+    <div class="legal-bar__content">
+      <span>© Copyright 2026 PLZ Spółdzielnia. Wszelkie prawa zastrzeżone.</span>
+      <span>Polityka prywatności</span>
+      <span>Przeciwdziałanie napastowaniu i CSAM</span>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/home.js"></script>
+</body>
+</html>
