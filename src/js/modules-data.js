@@ -1,21 +1,21 @@
-const ASSET = (name) => `/assets/${name}`;
+const ASSET = (name) => `/assets/icons/${name}`;
 
 export const MODULE_CARDS = [
   { title: 'Tablica', description: 'Dziel się bieżącymi informacjami ze swoją społecznością, wraz z dokumentami i powiadomieniami na czas', icon: ASSET('tablica.svg') },
   { title: 'Czaty i kanały', description: 'Prowadź efektywną komunikację bez rozpraszaczy.', icon: ASSET('czat.svg') },
   { title: 'Galeria', description: 'Przeglądaj zdjęcia udostępniane w twojej społeczności', icon: ASSET('galeria.svg') },
   { title: 'Głosowania', description: 'Przeprowadzaj sprawne głosowania, np. podczas Walnych Zgromadzeń.', icon: ASSET('glosowania.svg') },
-  { title: 'Raporty z głosowań', description: 'Generuj raporty akceptowane przez sądy rejestrowe (KRS)!', icon: ASSET('raporty z glosowan.svg') },
+  { title: 'Raporty z głosowań', description: 'Generuj raporty akceptowane przez sądy rejestrowe (KRS)!', icon: ASSET('raporty-z-glosowan.svg') },
   { title: 'Ankiety', description: 'Przeprowadzaj błyskawiczne ankiety wśród swojej społeczności', icon: ASSET('ankiety.svg') },
   { title: 'Zadania', description: 'Widzisz na bieżąco, które zadania są w toku, a które już zakończone, bez konieczności pytania kogokolwiek osobiście.', icon: ASSET('zadania.svg') },
-  { title: 'Załączanie pism i dokumentów', description: 'Wszystkie pisma i uchwały zostają w jednym miejscu, bez szukania w mailach czy różnych folderach', icon: ASSET('zalaczanie pism i dokumentow.svg') },
-  { title: 'Twój sklep', description: 'Prowadź e-sklep w ramach swojej społeczności', icon: ASSET('twoj sklep.svg') },
-  { title: 'Program lojalnościowy', description: 'Nagradzaj społeczność dedykowanym programem lojalnościowym', icon: ASSET('program lojalnosciowy.svg') },
-  { title: 'Karta członkowska', description: 'Nagradzaj punktami aktywność swoich członków', icon: ASSET('karta czlonkowska.svg') },
+  { title: 'Załączanie pism i dokumentów', description: 'Wszystkie pisma i uchwały zostają w jednym miejscu, bez szukania w mailach czy różnych folderach', icon: ASSET('zalaczanie-pism-i-dokumentow.svg') },
+  { title: 'Twój sklep', description: 'Prowadź e-sklep w ramach swojej społeczności', icon: ASSET('twoj-sklep.svg') },
+  { title: 'Program lojalnościowy', description: 'Nagradzaj społeczność dedykowanym programem lojalnościowym', icon: ASSET('program-lojalnosciowy.svg') },
+  { title: 'Karta członkowska', description: 'Nagradzaj punktami aktywność swoich członków', icon: ASSET('karta-czlonkowska.svg') },
   { title: 'Darowizny i składki', description: 'Pobieraj darowizny, składki i inne opłaty', icon: ASSET('darowizny.svg') },
   { title: 'Wydarzenia', description: 'Organizuj i przeprowadzaj wydarzenia od spotkań formalnych do zapisów na warsztaty i szkolenia', icon: ASSET('wydarzenia.svg') },
-  { title: 'PLZ Web', description: 'Korzystaj z PLZ zarówno na telefonie, jak i komputerze', icon: ASSET('plz web.svg') },
-  { title: 'Asystent AI', description: 'Zyskaj wsparcie w prawie i automatyzuj codzienne zadania biurowe', icon: ASSET('asystent.png') },
+  { title: 'PLZ Web', description: 'Korzystaj z PLZ zarówno na telefonie, jak i komputerze', icon: ASSET('plz-web.svg') },
+  { title: 'Asystent AI', description: 'Zyskaj wsparcie w prawie i automatyzuj codzienne zadania biurowe', icon: ASSET('asystent-ai.png') },
   { title: 'Odkrywaj', description: 'Korzystaj z zakładki Odkrywaj do promowania artykułów, wydarzeń i swojej społeczności', icon: ASSET('odkrywaj.svg') },
 ];
 
