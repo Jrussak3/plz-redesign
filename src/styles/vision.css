@@ -1,171 +1,592 @@
-/* ---------- Vision page ---------- */
+/* ---------- Vision page shell ---------- */
 
 .vision-page {
+  width: 100%;
   background: var(--color-lilac);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  /* clears the fixed Navbar (it grows with viewport width, up to 186px at 1800px+) */
   padding-top: 190px;
 }
 
 @media (min-width: 768px) {
   .vision-page {
-    padding-top: 80px;
+    padding-top: 130px;
   }
 }
 
-.vision {
-  display: flex;
+.vision-layout {
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  padding: 24px 12px 64px;
+  max-width: 1400px;
   margin: 0 auto;
-  max-width: 1500px;
-}
-
-@media (min-width: 768px) {
-  .vision {
-    gap: 80px;
-    padding: 64px 64px 64px;
-  }
-}
-
-/* ---------- Row / cell layout ---------- */
-
-.vision-row {
+  padding: 24px 16px 64px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  width: 100%;
+  gap: 40px;
 }
 
-@media (min-width: 768px) {
-  .vision-row {
+@media (min-width: 1024px) {
+  .vision-layout {
+    padding: 48px 24px 96px;
     flex-direction: row;
+    align-items: flex-start;
     gap: 48px;
   }
 }
 
-.vision-row__cell {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
+/* ---------- Table of contents ---------- */
+
+.vision-toc {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .vision-row__cell {
-    padding: 24px;
-  }
-}
-
-.vision-row__cell--image {
-  min-width: 0;
-}
-
-.vision-row__cell--copy {
-  flex-direction: column;
-}
-
-.vision-row__image {
-  width: 100%;
-  max-width: 400px;
-}
-
-@media (min-width: 768px) {
-  .vision-row__image {
-    max-width: none;
-  }
-}
-
-/* ---------- Statement row ---------- */
-
-.vision-statement {
-  word-break: break-word;
-  font-weight: 400;
+.vision-toc__title {
+  font-weight: 700;
+  font-size: 16px;
   color: var(--color-ink);
-  font-size: 28px;
-  line-height: 1.25;
-  text-align: center;
+  margin-bottom: 16px;
+}
+
+.vision-toc__list,
+.vision-toc__sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vision-toc__sublist {
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 16px;
+}
+
+.vision-toc__list > li > a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-ink);
+  transition: color 0.2s ease;
+}
+
+.vision-toc__sublist a {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-ink-75);
+  transition: color 0.2s ease;
+}
+
+.vision-toc a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Main column ---------- */
+
+.vision-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 @media (min-width: 768px) {
-  .vision-statement {
-    font-size: 42px;
-    text-align: left;
+  .vision-main {
+    gap: 56px;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.vision-hero__image-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #e9ddff, #f3edff);
+}
+
+.vision-hero__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.vision-hero__title {
+  margin-top: 32px;
+  word-break: break-word;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.vision-hero__title .gradient-text {
+  background: linear-gradient(to right, #bf96c5, #4700c3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.vision-hero__lead {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-ink-75);
+  max-width: 900px;
+}
+
+@media (min-width: 768px) {
+  .vision-hero__title {
+    font-size: 44px;
+  }
+  .vision-hero__lead {
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1024px) {
-  .vision-statement {
+  .vision-hero__title {
     font-size: 52px;
   }
 }
 
-/* ---------- Copy row ---------- */
+/* ---------- Section ---------- */
 
-.vision-copy {
-  word-break: break-word;
-  font-weight: 400;
-  color: var(--color-ink);
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-  text-align: center;
-  margin-bottom: 24px;
+.vision-section {
+  scroll-margin-top: 110px;
 }
 
-@media (min-width: 768px) {
-  .vision-copy {
-    font-size: 20px;
-    text-align: left;
-    margin-bottom: 64px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .vision-copy {
-    font-size: 22px;
-  }
-}
-
-.vision-claim {
-  word-break: break-word;
+.vision-section__title {
   font-weight: 700;
+  font-size: 26px;
+  line-height: 1.25;
   color: var(--color-ink);
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
-  .vision-claim {
-    font-size: 28px;
-    text-align: left;
-  }
-}
-
-@media (min-width: 1024px) {
-  .vision-claim {
+  .vision-section__title {
     font-size: 32px;
   }
 }
 
-.vision-claim__highlight {
-  display: inline;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  background-image: linear-gradient(180deg, #fff5ad, #fff5ad 150%);
-  background-repeat: no-repeat;
-  background-size: 100% 45%;
-  background-position: 0% 85%;
+.vision-section__body {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vision-section__body p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-ink-75);
+}
+
+@media (min-width: 768px) {
+  .vision-section__body p {
+    font-size: 16px;
+  }
+}
+
+.vision-section__body ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vision-section__body li {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-ink-75);
+}
+
+.vision-quote {
+  border-left: 3px solid var(--color-accent);
+  padding: 4px 0 4px 20px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-ink);
+}
+
+.vision-subsection {
+  margin-top: 32px;
+  scroll-margin-top: 110px;
+}
+
+.vision-subsection__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .vision-subsection__title {
+    font-size: 24px;
+  }
+}
+
+.vision-subsection__body {
+  margin-top: 12px;
+}
+
+.vision-subsection__body p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-ink-75);
+}
+
+@media (min-width: 768px) {
+  .vision-subsection__body p {
+    font-size: 16px;
+  }
+}
+
+/* ---------- Tables ---------- */
+
+.vision-table-wrap {
+  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.vision-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.vision-table th,
+.vision-table td {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+@media (min-width: 768px) {
+  .vision-table th,
+  .vision-table td {
+    font-size: 15px;
+  }
+}
+
+.vision-table thead th {
+  font-weight: 700;
+  color: var(--color-ink);
+  background: var(--color-lilac);
+}
+
+.vision-table tbody th {
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.vision-table tbody td {
+  font-weight: 400;
+  color: var(--color-ink-75);
+}
+
+.vision-table tbody tr:not(:last-child) th,
+.vision-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--color-ink-10);
+}
+
+/* ---------- Timeline ---------- */
+
+.vision-timeline {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-timeline__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 0;
+  border-top: 1px solid var(--color-ink-10);
+}
+
+.vision-timeline__item:last-child {
+  border-bottom: 1px solid var(--color-ink-10);
+}
+
+@media (min-width: 640px) {
+  .vision-timeline__item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 28px 4px;
+  }
+}
+
+.vision-timeline__year {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-accent-darker);
+}
+
+@media (min-width: 640px) {
+  .vision-timeline__year {
+    flex: 0 0 110px;
+    font-size: 28px;
+  }
+}
+
+.vision-timeline__list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vision-timeline__list li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-ink-75);
+}
+
+@media (min-width: 768px) {
+  .vision-timeline__list li {
+    font-size: 15px;
+  }
+}
+
+/* ---------- FAQ (this page reuses faq.css row/accordion classes) ---------- */
+
+.vision-faq {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- Join cards ---------- */
+
+.vision-join {
+  scroll-margin-top: 110px;
+}
+
+.vision-join-cards {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .vision-join-cards {
+    flex-direction: row;
+  }
+}
+
+.vision-join-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.vision-join-card--lilac {
+  background: linear-gradient(to bottom right, #e2d5ef, #f3edff);
+}
+
+.vision-join-card--peach {
+  background: linear-gradient(to bottom right, #fbe0c4, #fdeee1);
+}
+
+.vision-join-card__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+.vision-join-card__description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+.vision-join-card__button {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #fff;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-ink);
+  box-shadow: 0px 3px 10px 0px rgba(51, 51, 51, 0.15);
+  transition: opacity 0.2s ease;
+}
+
+.vision-join-card__button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Download banner ---------- */
+
+.vision-download-banner {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 24px;
+  background: var(--color-ink);
+  padding: 28px;
+}
+
+.vision-download-banner__qr {
+  display: none;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  padding: 10px;
+}
+
+.vision-download-banner__qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vision-download-banner__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.vision-download-banner__copy h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #fff;
+  text-align: center;
+}
+
+.vision-download-banner__mobile-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 14px 28px;
+  border-radius: 100px;
+  background: #fff;
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .vision-download-banner {
+    flex-direction: row;
+    align-items: center;
+  }
+  .vision-download-banner__qr {
+    display: flex;
+  }
+  .vision-download-banner__copy {
+    align-items: flex-start;
+  }
+  .vision-download-banner__copy h3 {
+    font-size: 28px;
+    text-align: left;
+  }
+  .vision-download-banner__mobile-cta {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .vision-download-banner {
+    padding: 40px;
+  }
+}
+
+.vision-download-banner .store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px;
+}
+
+.vision-download-banner .store-badge {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.vision-download-banner .store-badge img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.vision-download-banner .store-badge--apple {
+  background: #000;
+  color: #fff;
+  padding: 0 16px;
+  gap: 2px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 120px;
+}
+
+.vision-download-banner .store-badge--apple .store-badge__eyebrow {
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.vision-download-banner .store-badge--apple .store-badge__title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .vision-download-banner .store-badges {
+    justify-content: flex-start;
+  }
 }

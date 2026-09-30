@@ -3,11 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PLZ — Wizja</title>
+  <title>Wizja PLZ: spółdzielcza aplikacja dla lokalnych społeczności</title>
+  <meta name="description" content="Poznaj wizję PLZ, polskiej spółdzielczej aplikacji do zarządzania społecznością: współwłasność, suwerenność cyfrowa i technologia, która wzmacnia lokalne więzi." />
+  <link rel="canonical" href="https://plz.pl/wizja/" />
+
+  <meta property="og:title" content="Wizja PLZ: spółdzielcza aplikacja dla lokalnych społeczności" />
+  <meta property="og:description" content="Poznaj wizję PLZ, polskiej spółdzielczej aplikacji do zarządzania społecznością: współwłasność, suwerenność cyfrowa i technologia, która wzmacnia lokalne więzi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plz.pl/wizja/" />
+  <meta property="og:image" content="https://plz.pl/assets/illustrations/plz-vision-illustration.png" />
+  <meta property="og:locale" content="pl_PL" />
+
   <link rel="stylesheet" href="/src/styles/base.css" />
   <link rel="stylesheet" href="/src/styles/navbar.css" />
   <link rel="stylesheet" href="/src/styles/footer.css" />
+  <link rel="stylesheet" href="/src/styles/faq.css" />
   <link rel="stylesheet" href="/src/styles/vision.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://plz.pl/#organizacja",
+        "name": "PLZ Spółdzielnia",
+        "alternateName": "Platforma Lokalnych Zasobów",
+        "url": "https://plz.pl/",
+        "foundingDate": "2021",
+        "description": "Spółdzielnia cyfrowa prowadząca aplikację PLZ oraz CoopTech Hub, pierwsze w Polsce centrum technologii spółdzielczych.",
+        "sameAs": [
+          "https://plz.coop/",
+          "https://www.hub.coop/",
+          "https://pl.linkedin.com/company/plz-spoldzielnia",
+          "https://apps.apple.com/pl/app/plz/id1486750268"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://plz.pl/#aplikacja",
+        "name": "PLZ (Platforma Lokalnych Zasobów)",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "iOS, Android",
+        "url": "https://plz.pl/",
+        "publisher": { "@id": "https://plz.pl/#organizacja" },
+        "description": "Polska, spółdzielcza aplikacja do zarządzania społecznością i współpracy: czaty, głosowania formalne, wydarzenia, zadania, składki i płatności.",
+        "featureList": [
+          "Głosowania formalne z raportowaniem",
+          "Czaty i kanały społeczności",
+          "Wydarzenia i zadania",
+          "Składki, darowizny i płatności",
+          "Karta członkowska i program lojalnościowy"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "80.00",
+          "priceCurrency": "PLN",
+          "url": "https://plz.pl/cennik.html",
+          "description": "Abonament podstawowy za całą organizację, miesięcznie netto. Konto osobiste bezpłatne.",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://plz.pl/wizja/#strona",
+        "url": "https://plz.pl/wizja/",
+        "name": "Wizja PLZ",
+        "inLanguage": "pl-PL",
+        "dateModified": "2026-09-29",
+        "about": { "@id": "https://plz.pl/#aplikacja" },
+        "publisher": { "@id": "https://plz.pl/#organizacja" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://plz.pl/wizja/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy PLZ to polska aplikacja?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. PLZ jest projektowane, budowane i utrzymywane w Polsce przez PLZ Spółdzielnię. Dane przetwarzane są zgodnie z RODO, NIS2 i DORA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co oznacza, że PLZ jest spółdzielcze?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aplikację prowadzi spółdzielnia, a nie spółka nastawiona wyłącznie na zysk dla akcjonariuszy. Społeczności korzystające z PLZ mają wpływ na kierunek rozwoju produktu. Organizacje i użytkownicy mają prawo przystąpić do spółdzielni i formalnie uczestniczyć w głosowaniach."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy PLZ zastąpi grupę na Facebooku?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, zwłaszcza w zakresie komunikacji wewnętrznej, głosowań, wydarzeń i składek. Budowanie otwartego zasięgu marketingowego jest w planach rozwojowych aplikacji. Pracujemy nad połączeniem z otwartymi, zdecentralizowanymi sieciami, takimi jak Mastodon bez algorytmów nagradzających clickbait."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy w PLZ można przeprowadzić walne zgromadzenie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aplikacja obsługuje głosowania formalne i ankiety otwarte wykorzystywane podczas walnych zgromadzeń, posiedzeń rady nadzorczej czy zarządu. Raporty z głosowań są zgodne z obowiązującymi przepisami prawa, w tym z Prawem spółdzielczym i uznawane przez KRS (Krajowy Rejestr Sądowy)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ile kosztuje PLZ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aplikacja jest i zawsze będzie darmowa dla indywidualnych użytkowników - za jej utrzymanie płacą wyłącznie organizacje. Najtańszy abonament podstawowy za całą organizację kosztuje 80 zł netto miesięcznie po darmowym okresie próbnym. Pakiety pro i indywidualny są skierowane do dużych organizacji i są droższe. Szczegóły można znaleźć na stronie: https://plz.pl/offer/"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gdzie przechowywane są dane społeczności?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wszystkie dane PLZ są przetwarzane na serwerach zlokalizowanych w Polsce. Chmurę obliczeniową i fabrykę AI buduje dla nas Polcom, jeden z wiodących w Polsce dostawców usług cloud computing i nowoczesnych centrów danych."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "W jaki sposób mogę mieć wpływ na rozwój PLZ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wpływ na rozwój PLZ można mieć na dwa sposoby. Po pierwsze, poprzez dołączenie do spółdzielni jako członek/członkini, dzięki czemu zyskujesz realny głos w podejmowanych decyzjach. Po drugie, poprzez udział w regularnie organizowanych warsztatach UX i przekazywanie swoich uwag, które są następnie analizowane i wdrażane w kolejnych aktualizacjach platformy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę dołączyć do PLZ, jeśli nie należę do organizacji społecznej?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Jeśli nie należysz do organizacji lub dopiero zastanawiasz się nad przejściem na PLZ, to żaden problem! Zawsze możesz założyć darmowe konto osobiste w aplikacji i dołączyć do otwartych społeczności lub samodzielnie przetestować dostępne funkcjonalności."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ===== Navbar ===== -->
@@ -64,40 +203,530 @@
     </nav>
 
   <!-- ===== Vision content ===== -->
-  <div class="vision-page" data-name="Vision page">
-    <div class="vision" data-name="Wizja">
-      <div class="vision-row" data-name="Vision statement row">
-        <div class="vision-row__cell vision-row__cell--copy">
-          <p class="vision-statement">Wszystko czego potrzebuje Twoja społeczność masz w jednej aplikacji!</p>
-        </div>
-        <div class="vision-row__cell vision-row__cell--image">
-          <img class="vision-row__image" alt="" src="/assets/illustrations/wizja-1.svg" />
-        </div>
-      </div>
+  <main class="vision-page" data-name="Vision page">
+    <div class="vision-layout">
 
-      <div class="vision-row" data-name="Vision copy row">
-        <div class="vision-row__cell vision-row__cell--image">
-          <img class="vision-row__image" alt="" src="/assets/illustrations/wizja-2.svg" />
-        </div>
-        <div class="vision-row__cell vision-row__cell--copy">
-          <p class="vision-copy">
-            Człowiek jest istotą społeczną dążącą do współpracy. Stwierdzenie to ma, głębokie konsekwencje ekonomiczne,
-            społeczne i kulturowe. W świecie, w którym globalna ekonomia i nowe technologie umożliwiły nieskrępowany
-            przepływ kapitału, pracy i wiedzy, zwykli ludzie utracili wpływ na kształt miejsc w których żyją i pracują.
-            Dlatego powinniśmy kreować przyszłość takimi narzędziami i mechanizmami, które pozwolą zmienić relacje
-            między sferą ekonomiczną i społeczną, dając siłę wspólnotom. Wierzymy, że budowa sprawiedliwego świata
-            opiera się na zrównoważonej i zakorzenionej lokalnie gospodarce, która służy dobrostanowi całej społeczności
-            i nikogo nie wyklucza. PLZ to narzędzie technologiczne, które pozwala budować relacje współpracy oparte na
-            zaufaniu oraz dobrze zarządzać lokalnymi zasobami.
+      <!-- ===== Table of contents ===== -->
+      <nav class="vision-toc" aria-label="Spis treści">
+        <p class="vision-toc__title">Spis treści</p>
+        <ul class="vision-toc__list">
+          <li><a href="#czym-jest-spoldzielcza-aplikacja-cyfrowa">Czym jest spółdzielcza aplikacja cyfrowa?</a></li>
+          <li><a href="#nasza-wizja">Nasza wizja</a></li>
+          <li>
+            <a href="#problem-spolecznosci">Problem: społeczności żyją w infrastrukturze, której nie kontrolują</a>
+            <ul class="vision-toc__sublist">
+              <li><a href="#wspolwlasnosc-zamiast-technofeudalizmu">Współwłasność zamiast technofeudalizmu</a></li>
+              <li><a href="#suwerennosc-cyfrowa">Suwerenność cyfrowa</a></li>
+              <li><a href="#technologia-ktora-wzmacnia-wiezi">Technologia, która wzmacnia więzi, a nie uzależnia</a></li>
+            </ul>
+          </li>
+          <li><a href="#jak-wizja-przeklada-sie-na-aplikacje">Jak wizja przekłada się na aplikację</a></li>
+          <li><a href="#dla-kogo-jest-plz">Dla kogo jest PLZ, a dla kogo nie</a></li>
+          <li><a href="#czym-plz-rozni-sie">Czym PLZ różni się od Facebooka i Microsoft Teams</a></li>
+          <li><a href="#dokad-zmierzamy">Dokąd zmierzamy — rozwój funkcjonalności</a></li>
+          <li><a href="#kto-za-tym-stoi">Kto za tym stoi</a></li>
+          <li><a href="#najczestsze-pytania">Najczęstsze pytania o wizję PLZ</a></li>
+        </ul>
+      </nav>
+
+      <div class="vision-main">
+
+        <!-- ===== Hero ===== -->
+        <div class="vision-hero">
+          <div class="vision-hero__image-wrap">
+            <img class="vision-hero__image" src="/assets/illustrations/plz-vision-illustration-3-1.png" alt="Ilustracja lokalnej społeczności współpracującej w mieście: mieszkańcy na targu, rowerzystka i przechodnie wśród kamienic i turbin wiatrowych" width="1200" height="400" />
+          </div>
+
+          <h1 class="vision-hero__title">Wizja PLZ: <span class="gradient-text">infrastruktura cyfrowa, która należy do społeczności</span></h1>
+
+          <p class="vision-hero__lead">
+            PLZ (Platforma Lokalnych Zasobów) to polska, spółdzielcza aplikacja do zarządzania społecznością i współpracy.
+            Łączy czaty, głosowania, wydarzenia, zadania, składki, płatności i AI w jednym miejscu. W naszej wizji
+            współwłaścicielami infrastruktury cyfrowej są jej użytkownicy: spółdzielnie, samorządy, związki zawodowe,
+            organizacje pozarządowe i wspólnoty lokalne na zasadzie równości. Naszą misją jest dostarczanie technologii
+            organizacjom, których potrzeby często lądują na marginesie zainteresowania korporacji technologicznych.
+            Tylko w ten sposób możemy zagwarantować suwerenność cyfrową i lokalną odporność.
           </p>
-          <p class="vision-claim">
-            Dzięki PLZ możesz budować z nami nową lokalność w oparciu o
-            <span class="vision-claim__highlight">wspólne wartości, takie jak: zaufanie, współpraca, zrównoważony rozwój, przejrzystość i solidarność.</span>
-          </p>
         </div>
+
+        <!-- ===== Czym jest spółdzielcza aplikacja cyfrowa ===== -->
+        <section class="vision-section" id="czym-jest-spoldzielcza-aplikacja-cyfrowa">
+          <h2 class="vision-section__title">Czym jest spółdzielcza aplikacja cyfrowa?</h2>
+          <div class="vision-section__body">
+            <p>
+              Spółdzielcza aplikacja cyfrowa to oprogramowanie prowadzone przez spółdzielnię, w którym osoby korzystające
+              z platformy mogą być jednocześnie jej współwłaścicielami i współdecydować o kierunku rozwoju. W przeciwieństwie
+              do korporacji czy startupów, spółdzielnia podlega demokratycznej kontroli członków. Aplikacja PLZ jest
+              produktem PLZ Spółdzielni, spółdzielni cyfrowej prowadzącej <a href="https://www.hub.coop/" target="_blank" rel="noopener">CoopTech Hub</a>,
+              pierwsze w Polsce centrum technologii spółdzielczych. Kontynuujemy blisko 200-letnią tradycję polskiej
+              spółdzielczości, przenosząc ją do epoki innowacji i technologii.
+            </p>
+            <p>
+              Z aplikacji korzysta ponad 10 000 użytkowników (stan na wrzesień 2026) w Polsce, w tym Ogólnopolskie
+              Porozumienie Związków Zawodowych, Ogólnopolski Związek Rewizyjny Spółdzielni Socjalnych, Związek Rewizyjny
+              Banków Spółdzielczych im. Franciszka Stefczyka w Warszawie, Związek Rewizyjny Banków Spółdzielczych
+              w Poznaniu, Polska Sieć Ekonomii i inne.
+            </p>
+          </div>
+        </section>
+
+        <!-- ===== Nasza wizja ===== -->
+        <section class="vision-section" id="nasza-wizja">
+          <h2 class="vision-section__title">Nasza wizja</h2>
+          <div class="vision-section__body">
+            <p>Nasza wizja zmiany zawiera się w poniższym fragmencie Preambuły Statutu PLZ Spółdzielni:</p>
+            <blockquote class="vision-quote">
+              „Człowiek jest istotą społeczną dążącą do współpracy. Stwierdzenie to ma głębokie konsekwencje ekonomiczne,
+              społeczne i kulturowe. W świecie, w którym globalna ekonomia i nowe technologie umożliwiły nieskrępowany
+              przepływ kapitału, pracy i wiedzy, zwykli ludzie utracili wpływ na kształt miejsc, w których żyją i pracują.
+              Dlatego powinniśmy kreować przyszłość takimi narzędziami i mechanizmami, które pozwolą zmienić relacje
+              między sferą ekonomiczną i społeczną, dając siłę wspólnotom. Wierzymy, że budowa sprawiedliwego świata
+              opiera się na zrównoważonej i zakorzenionej lokalnie gospodarce, która służy dobrostanowi całej społeczności
+              i nikogo nie wyklucza.”
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- ===== Problem ===== -->
+        <section class="vision-section" id="problem-spolecznosci">
+          <h2 class="vision-section__title">Problem: społeczności żyją w infrastrukturze, której nie kontrolują</h2>
+          <div class="vision-section__body">
+            <p>
+              Większość polskich spółdzielni, kół gospodyń, związków zawodowych, wspólnot mieszkaniowych i organizacji
+              pozarządowych komunikuje się przez grupy na Facebooku, WhatsAppie czy Discordzie. Te narzędzia są darmowe,
+              ale ich zasady ustala właściciel, a społeczność nie ma wpływu na algorytm, dane ani ciągłość usługi. Żadna
+              z tych platform nie oferuje narzędzi dopasowanych dokładnie do potrzeb prowadzenia organizacji społecznej.
+            </p>
+            <p>Organizacje mierzą się z kosztownymi konsekwencjami:</p>
+            <ul>
+              <li>Uchwały i głosowania odbywają się na papierze, co wydłuża procesy i podnosi koszty.</li>
+              <li>Archiwum organizacji, jej historia i ustalenia, jest rozproszone.</li>
+              <li>Dane osób członkowskich trafiają na serwery poza Unią Europejską, łamiąc RODO.</li>
+              <li>Zasięgi organizacji są wyciszane przez algorytmy, rośnie presja na kupno reklam.</li>
+            </ul>
+            <p>
+              Poleganie na infrastrukturze zagranicznych korporacji osłabia możliwości samodzielnego wytyczania kierunku
+              rozwoju otaczających nas technologii. Dzięki oparciu o krajową gospodarkę wzmacniamy suwerenność cyfrową
+              i innowacje tworzone w oparciu o realne potrzeby społeczeństwa.
+            </p>
+          </div>
+
+          <div class="vision-subsection" id="wspolwlasnosc-zamiast-technofeudalizmu">
+            <h3 class="vision-subsection__title">Współwłasność zamiast technofeudalizmu</h3>
+            <div class="vision-subsection__body">
+              <p>
+                Korzystanie z komercyjnej platformy (np. Facebook, WhatsApp) to transakcja z ukrytymi, nieuczciwymi
+                kosztami: płacisz swoimi danymi i uwagą, a warunki mogą się zmienić z dnia na dzień. Model spółdzielczy
+                odwraca tę relację. Społeczności korzystające z PLZ współdecydują o rozwoju aplikacji, a wypracowana
+                wartość wraca do sieci, zamiast wypływać za granicę.
+              </p>
+            </div>
+          </div>
+
+          <div class="vision-subsection" id="suwerennosc-cyfrowa">
+            <h3 class="vision-subsection__title">Suwerenność cyfrowa</h3>
+            <div class="vision-subsection__body">
+              <p>
+                Suwerenność cyfrowa oznacza kontrolę nad tym, gdzie leżą dane, kto ma do nich dostęp i od czyich decyzji
+                zależy ciągłość usługi. PLZ jest budowane i utrzymywane na krajowych serwerach w pełnej zgodności
+                z RODO, NIS2 i DORA. PLZ nie zbiera danych ponad potrzebę, nie stosuje reklam profilowanych, nie
+                stosuje zwodniczych interfejsów. Dla banku, związku zawodowego czy spółdzielni to gwarancja
+                bezpieczeństwa prawnego i operacyjnego.
+              </p>
+            </div>
+          </div>
+
+          <div class="vision-subsection" id="technologia-ktora-wzmacnia-wiezi">
+            <h3 class="vision-subsection__title">Technologia, która wzmacnia więzi, a nie uzależnia</h3>
+            <div class="vision-subsection__body">
+              <p>
+                Nie budujemy medium społecznościowego nastawionego na czas spędzony w aplikacji. Budujemy narzędzie,
+                które ma skrócić drogę od pomysłu do decyzji i od decyzji do działania. Sukcesem PLZ jest przegłosowana
+                uchwała, opłacona składka i zorganizowane wydarzenie, a nie kolejna minuta scrollowania. Stale
+                wdrażamy nowe funkcje ułatwiające zarządzanie organizacją, których nie oferują korporacje technologiczne.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Jak wizja przekłada się na aplikację ===== -->
+        <section class="vision-section" id="jak-wizja-przeklada-sie-na-aplikacje">
+          <h2 class="vision-section__title">Jak wizja przekłada się na aplikację</h2>
+          <div class="vision-table-wrap">
+            <table class="vision-table">
+              <thead>
+                <tr>
+                  <th scope="col">Element wizji</th>
+                  <th scope="col">Funkcja w aplikacji</th>
+                  <th scope="col">Efekt dla organizacji</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Demokratyczne decyzje</th>
+                  <td>Głosowania, ankiety, raporty</td>
+                  <td>Krótszy proces decyzyjny, wyższa frekwencja</td>
+                </tr>
+                <tr>
+                  <th scope="row">Komunikacja bez rozpraszaczy</th>
+                  <td>Czaty, kanały, newsy, wydarzenia, zadania</td>
+                  <td>Jedno miejsce zamiast rozproszonych grup</td>
+                </tr>
+                <tr>
+                  <th scope="row">Niezależność finansowa</th>
+                  <td>Składki, darowizny, bramka płatnicza, e-sklep, płatności zbliżeniowe</td>
+                  <td>Proste i najtańsze na rynku płatności</td>
+                </tr>
+                <tr>
+                  <th scope="row">Przynależność i zaangażowanie</th>
+                  <td>Karta członkowska, program lojalnościowy</td>
+                  <td>Mierzalne zaangażowanie osób członkowskich</td>
+                </tr>
+                <tr>
+                  <th scope="row">Suwerenność danych</th>
+                  <td>Infrastruktura w Polsce, zgodność z RODO</td>
+                  <td>Kontrola nad danymi społeczności</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===== Dla kogo jest PLZ ===== -->
+        <section class="vision-section" id="dla-kogo-jest-plz">
+          <h2 class="vision-section__title">Dla kogo jest PLZ, a dla kogo nie</h2>
+          <div class="vision-section__body">
+            <p>
+              <strong>PLZ sprawdza się w:</strong> spółdzielniach (mieszkaniowych, energetycznych, socjalnych, pracy),
+              kooperatywach spożywczych, związkach zawodowych, organizacjach pozarządowych, studenckich kołach
+              naukowych i stowarzyszeniach, wspólnotach mieszkaniowych, kołach gospodyń wiejskich, samorządach
+              lokalnych i sieciach franczyzowych o strukturze członkowskiej.
+            </p>
+            <p>
+              <strong>PLZ nie jest dobrym wyborem, jeśli:</strong> szukasz komunikatora do zespołu projektowego bez
+              struktury członkowskiej, potrzebujesz pełnego systemu ERP albo księgowości, albo zależy Ci na budowaniu
+              otwartego zasięgu marketingowego. Mówimy uczciwie, jaki jest model biznesowy PLZ i do czego służy,
+              a do czego nie.
+            </p>
+          </div>
+        </section>
+
+        <!-- ===== Czym PLZ różni się od Facebooka i Microsoft Teams ===== -->
+        <section class="vision-section" id="czym-plz-rozni-sie">
+          <h2 class="vision-section__title">Czym PLZ różni się od Facebooka i Microsoft Teams</h2>
+          <div class="vision-table-wrap">
+            <table class="vision-table">
+              <thead>
+                <tr>
+                  <th scope="col">Kryterium</th>
+                  <th scope="col">PLZ</th>
+                  <th scope="col">Facebook</th>
+                  <th scope="col">Microsoft Teams</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Właściciel</th>
+                  <td>Spółdzielnia (użytkownicy)</td>
+                  <td>Spółka giełdowa (akcjonariusze)</td>
+                  <td>Spółka giełdowa (akcjonariusze)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Model przychodu</th>
+                  <td>Abonament tylko od organizacji</td>
+                  <td>Reklamy inwigilacyjne</td>
+                  <td>Abonament od stanowiska pracy</td>
+                </tr>
+                <tr>
+                  <th scope="row">Głosowania</th>
+                  <td>Formalne z raportowaniem</td>
+                  <td>Brak</td>
+                  <td>Brak</td>
+                </tr>
+                <tr>
+                  <th scope="row">Płatności, składki, darowizny</th>
+                  <td>Integracja z Autopay</td>
+                  <td>Brak (skasowane)</td>
+                  <td>Brak</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lokalizacja danych</th>
+                  <td>Polska (zgodność z RODO)</td>
+                  <td>Poza UE (jurysdykcja niezgodna z RODO)</td>
+                  <td>Zależnie od planu (jurysdykcja niezgodna z RODO)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Wpływ na rozwój</th>
+                  <td>Bezpośredni</td>
+                  <td>Brak</td>
+                  <td>Brak</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===== Dokąd zmierzamy ===== -->
+        <section class="vision-section" id="dokad-zmierzamy">
+          <h2 class="vision-section__title">Dokąd zmierzamy — rozwój funkcjonalności</h2>
+          <div class="vision-timeline">
+            <div class="vision-timeline__item">
+              <p class="vision-timeline__year">2025</p>
+              <ul class="vision-timeline__list">
+                <li>Aktualizacje Panelu Partnera (onboarding i aktualizacja UI); nowy design grup prywatnych.</li>
+              </ul>
+            </div>
+            <div class="vision-timeline__item">
+              <p class="vision-timeline__year">2026</p>
+              <ul class="vision-timeline__list">
+                <li>PLZ Web — portal w wersji web dostępny z poziomu przeglądarki internetowej;</li>
+                <li>Kanały w społecznościach — tworzenie kanałów prywatnych i otwartych;</li>
+                <li>Tworzenie newsów z aplikacji mobilnej;</li>
+                <li>Pełnomocnictwa do głosowaniach dające możliwość oddawania głosów w imieniu innych osób oraz reprezentowanych organizacji w głosowaniach formalnych;</li>
+                <li>Asystent Związkowca AI, który przygotowuje projekty pism, protokoły, materiały informacyjne, wyszukuje przepisy i porządkuje wiedzę;</li>
+                <li>Redesign aplikacji mobilnej oraz zgodność z WCAG 2.1 Level AA;</li>
+                <li>Dodawanie pliku (PDF, DOCX, ODT) do newsa;</li>
+                <li>Zakładka Odkrywaj pozwalająca na przeglądanie treści z otwartych społeczności w aplikacji.</li>
+              </ul>
+            </div>
+            <div class="vision-timeline__item">
+              <p class="vision-timeline__year">2027</p>
+              <ul class="vision-timeline__list">
+                <li>Obsługa połączeń wideo, w tym wideokonferencji, webinarów i szkoleń online;</li>
+                <li>PLZ Dysk zastępujący korporacyjne, podatne na inwigilację rozwiązania;</li>
+                <li>Integracja z najpopularniejszymi rozwiązaniami open source, np. NextCloud, Mastodon;</li>
+                <li>Funkcje CRM i zaawansowanej obsługi bazy członkowskiej.</li>
+              </ul>
+            </div>
+            <div class="vision-timeline__item">
+              <p class="vision-timeline__year">2028</p>
+              <ul class="vision-timeline__list">
+                <li>Waluty lokalne i bankowość społeczna;</li>
+                <li>Asystent AI kompleksowo obsługujący wszystkie potrzeby organizacyjne;</li>
+                <li>Federacyjne medium społecznościowe uczestniczące w globalnej dyskusji.</li>
+              </ul>
+            </div>
+            <div class="vision-timeline__item">
+              <p class="vision-timeline__year">2029</p>
+              <ul class="vision-timeline__list">
+                <li>Innowacyjne modele spółdzielcze dla różnych branż gospodarki zagrożonych rewolucją technologiczną i globalnymi wojnami handlowymi.</li>
+              </ul>
+            </div>
+            <div class="vision-timeline__item">
+              <p class="vision-timeline__year">2030+</p>
+              <ul class="vision-timeline__list">
+                <li>Spółdzielczy model rozwoju gwarantujący odporność, rozwój i dobrobyt dla Polski na lata.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Kto za tym stoi ===== -->
+        <section class="vision-section" id="kto-za-tym-stoi">
+          <h2 class="vision-section__title">Kto za tym stoi</h2>
+          <div class="vision-section__body">
+            <p>
+              Administratorem PLZ jest <a href="https://plz.coop/" target="_blank" rel="noopener">PLZ Spółdzielnia</a>.
+              Od 2021 r. integrujemy polski ruch spółdzielczy i budujemy lokalną odporność. PLZ Spółdzielnia jest
+              spółdzielnią cyfrową prowadzącą <a href="https://www.hub.coop/" target="_blank" rel="noopener">CoopTech Hub</a>,
+              pierwsze w Polsce centrum technologii spółdzielczych, które realizuje wielomilionowe projekty europejskie.
+              Projektujemy i wdrażamy rozwiązania bankowości społecznej (social banking, BaaS), spółdzielczości
+              platformowej (platform cooperativism) oraz budowania dobrobytu społeczności (Community Wealth Building).
+            </p>
+            <p>
+              Wybraliśmy model spółdzielczy jako najlepsze narzędzie gwarantujące, że użytkownicy technologii są jej
+              współwłaścicielami. Dlatego w PLZ działamy w zgodzie z przyjętymi przez międzynarodowy ruch spółdzielczy
+              Zasadami Spółdzielczymi: dobrowolnego i otwartego członkostwa, demokratycznej kontroli członkowskiej,
+              ekonomicznego uczestnictwa członków, autonomii i niezależności, kształcenia, szkolenia i informacji,
+              współdziałania oraz troski o społeczność lokalną.
+            </p>
+          </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section class="vision-section" id="najczestsze-pytania">
+          <h2 class="vision-section__title">Najczęstsze pytania o wizję PLZ</h2>
+          <div class="vision-faq">
+
+            <div class="faq-row is-open">
+              <button type="button" class="faq-row__toggle" aria-expanded="true">
+                <span class="faq-row__question">Czy PLZ to polska aplikacja?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Tak. PLZ jest projektowane, budowane i utrzymywane w Polsce przez PLZ Spółdzielnię. Dane przetwarzane są zgodnie z RODO, NIS2 i DORA.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Co oznacza, że PLZ jest spółdzielcze?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aplikację prowadzi spółdzielnia, a nie spółka nastawiona wyłącznie na zysk dla akcjonariuszy. Społeczności korzystające z PLZ mają wpływ na kierunek rozwoju produktu. Organizacje i użytkownicy mają prawo przystąpić do spółdzielni i formalnie uczestniczyć w głosowaniach.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Czy PLZ zastąpi grupę na Facebooku?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Tak, zwłaszcza w zakresie komunikacji wewnętrznej, głosowań, wydarzeń i składek. Budowanie otwartego zasięgu marketingowego jest w planach rozwojowych aplikacji. Pracujemy nad połączeniem z otwartymi, zdecentralizowanymi sieciami, takimi jak Mastodon bez algorytmów nagradzających clickbait.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Czy w PLZ można przeprowadzić walne zgromadzenie?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aplikacja obsługuje głosowania formalne i ankiety otwarte wykorzystywane podczas walnych zgromadzeń, posiedzeń rady nadzorczej czy zarządu. Raporty z głosowań są zgodne z obowiązującymi przepisami prawa, w tym z Prawem spółdzielczym i uznawane przez KRS (Krajowy Rejestr Sądowy).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Ile kosztuje PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Aplikacja jest i zawsze będzie darmowa dla indywidualnych użytkowników – za jej utrzymanie płacą wyłącznie organizacje. Najtańszy abonament podstawowy za całą organizację kosztuje 80 zł netto miesięcznie po darmowym okresie próbnym. Pakiety pro i indywidualny są skierowane do dużych organizacji i są droższe. Szczegóły można znaleźć na stronie <a href="cennik.html">cennik aplikacji PLZ</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Gdzie przechowywane są dane społeczności?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Wszystkie dane PLZ są przetwarzane na serwerach zlokalizowanych w Polsce. Chmurę obliczeniową i fabrykę AI buduje dla nas Polcom, jeden z wiodących w Polsce dostawców usług cloud computing i nowoczesnych centrów danych.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">W jaki sposób mogę mieć wpływ na rozwój PLZ?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Wpływ na rozwój PLZ można mieć na dwa sposoby. Po pierwsze, poprzez dołączenie do spółdzielni jako członek/członkini, dzięki czemu zyskujesz realny głos w podejmowanych decyzjach. Po drugie, poprzez udział w regularnie organizowanych warsztatach UX i przekazywanie swoich uwag, które są następnie analizowane i wdrażane w kolejnych aktualizacjach platformy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-row">
+              <button type="button" class="faq-row__toggle" aria-expanded="false">
+                <span class="faq-row__question">Czy mogę dołączyć do PLZ, jeśli nie należę do organizacji społecznej?</span>
+                <span class="faq-row__chevron">
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--down" fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 8L10 13L15 8" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                  <svg class="faq-row__chevron-icon faq-row__chevron-icon--up" fill="none" height="16" viewBox="0 0 16 16" width="16"><path d="M4 10L8 6L12 10" stroke="#fffbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Jeśli nie należysz do organizacji lub dopiero zastanawiasz się nad przejściem na PLZ, to żaden problem! Zawsze możesz założyć darmowe konto osobiste w aplikacji i dołączyć do otwartych społeczności lub samodzielnie przetestować dostępne funkcjonalności.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ===== Dołącz do społeczności PLZ ===== -->
+        <section class="vision-section vision-join" id="dolacz-do-spolecznosci">
+          <h2 class="vision-section__title">Dołącz do społeczności PLZ</h2>
+
+          <div class="vision-join-cards">
+            <div class="vision-join-card vision-join-card--lilac">
+              <div>
+                <p class="vision-join-card__title">Zobacz, ile to kosztuje</p>
+                <p class="vision-join-card__description">Twoją społeczność w PLZ możesz założyć już od 80 zł miesięcznie. Zobacz dostępne plany w aplikacji.</p>
+              </div>
+              <a href="cennik.html" class="vision-join-card__button">Cennik aplikacji PLZ</a>
+            </div>
+            <div class="vision-join-card vision-join-card--peach">
+              <div>
+                <p class="vision-join-card__title">Załóż swoją społeczność w PLZ</p>
+                <p class="vision-join-card__description">Skontaktuj się z nami, aby wspólnie omówić szczegóły wdrożenia aplikacji.</p>
+              </div>
+              <a href="contact.html" class="vision-join-card__button">Kontakt w sprawie wdrożenia</a>
+            </div>
+          </div>
+
+          <div class="vision-download-banner">
+            <div class="vision-download-banner__qr"><img alt="Kod QR do pobrania aplikacji PLZ" src="/assets/brand/qr-code-cooptechhub.jpg" /></div>
+            <div class="vision-download-banner__copy">
+              <h3>Pobierz aplikację PLZ za darmo</h3>
+              <a class="vision-download-banner__mobile-cta" href="https://link.plz.pl/ZXnvEsjzjsoNGyZi8?title=CoopTech+Hub">Pobierz aplikację PLZ</a>
+              <div class="store-badges">
+                <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.zgosa.joy&hl=pl" target="_blank" rel="noopener"><img alt="Pobierz z Google Play" src="/assets/brand/google-play-badge.png" /></a>
+                <a class="store-badge store-badge--apple" href="https://apps.apple.com/pl/app/plz/id1486750268?l=pl" target="_blank" rel="noopener">
+                  <span class="store-badge__eyebrow">Dostępne w</span>
+                  <span class="store-badge__title">App Store</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
-  </div>
+  </main>
 
   <!-- ===== Footer ===== -->
   <footer class="dark-footer" data-name="Group_2583">
