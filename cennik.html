@@ -3,11 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PLZ — Cennik</title>
+  <title>PLZ — Cennik | Pakiety dla organizacji</title>
+  <meta name="description" content="Sprawdź cennik aplikacji PLZ dla organizacji: Pakiet Podstawowy od 80 zł netto miesięcznie, Pakiet Pro i Pakiet Indywidualny dla większych społeczności." />
+  <link rel="canonical" href="https://plz.pl/cennik/" />
+
+  <meta property="og:title" content="PLZ — Cennik | Pakiety dla organizacji" />
+  <meta property="og:description" content="Sprawdź cennik aplikacji PLZ dla organizacji: Pakiet Podstawowy od 80 zł netto miesięcznie, Pakiet Pro i Pakiet Indywidualny dla większych społeczności." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plz.pl/cennik/" />
+  <meta property="og:locale" content="pl_PL" />
+
   <link rel="stylesheet" href="/src/styles/base.css" />
   <link rel="stylesheet" href="/src/styles/navbar.css" />
   <link rel="stylesheet" href="/src/styles/footer.css" />
   <link rel="stylesheet" href="/src/styles/cennik.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://plz.pl/#organizacja",
+      "name": "PLZ Spółdzielnia",
+      "alternateName": "Platforma Lokalnych Zasobów",
+      "url": "https://plz.pl/",
+      "foundingDate": "2021",
+      "description": "Spółdzielnia cyfrowa prowadząca aplikację PLZ oraz CoopTech Hub, pierwsze w Polsce centrum technologii spółdzielczych.",
+      "sameAs": [
+        "https://plz.coop/",
+        "https://www.hub.coop/",
+        "https://pl.linkedin.com/company/plz-spoldzielnia",
+        "https://apps.apple.com/pl/app/plz/id1486750268"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://plz.pl/#aplikacja",
+      "name": "PLZ (Platforma Lokalnych Zasobów)",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS, Android",
+      "url": "https://plz.pl/",
+      "publisher": {
+        "@id": "https://plz.pl/#organizacja"
+      },
+      "description": "Polska, spółdzielcza aplikacja do zarządzania społecznością i współpracy: czaty, głosowania formalne, wydarzenia, zadania, składki i płatności.",
+      "featureList": [
+        "Głosowania formalne z raportowaniem",
+        "Czaty i kanały społeczności",
+        "Wydarzenia i zadania",
+        "Składki, darowizny i płatności",
+        "Karta członkowska i program lojalnościowy"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "80.00",
+        "priceCurrency": "PLN",
+        "url": "https://plz.pl/cennik/",
+        "description": "Abonament podstawowy za całą organizację, miesięcznie netto. Konto osobiste bezpłatne.",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://plz.pl/cennik/#strona",
+      "url": "https://plz.pl/cennik/",
+      "name": "PLZ — Cennik",
+      "inLanguage": "pl-PL",
+      "dateModified": "2026-09-30",
+      "about": {
+        "@id": "https://plz.pl/cennik/#abonament"
+      },
+      "publisher": {
+        "@id": "https://plz.pl/#organizacja"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://plz.pl/cennik/#abonament",
+      "name": "Abonament PLZ dla organizacji",
+      "description": "Abonament aplikacji PLZ dla organizacji i społeczności, rozliczany miesięcznie netto za całą organizację.",
+      "brand": {
+        "@id": "https://plz.pl/#organizacja"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Pakiet Podstawowy",
+          "description": "Do 250 członków społeczności. Czat grupowy i indywidualny, Newsy, Twoja Karta, Głosowania, Wydarzenia, Kalendarz, Zadania, powiadomienia push, raporty z głosowań.",
+          "price": "80.00",
+          "priceCurrency": "PLN",
+          "url": "https://plz.pl/cennik/",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pakiet Pro",
+          "description": "250-500 członków społeczności. Zawiera funkcje Pakietu Podstawowego oraz przyjmowanie płatności w aplikacji, Twój sklep, programy partnerskie, wiele społeczności i 60 minut doradztwa kwartalnie.",
+          "price": "145.00",
+          "priceCurrency": "PLN",
+          "url": "https://plz.pl/cennik/",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pakiet Indywidualny",
+          "description": "Ponad 1000 członków społeczności. Zawiera funkcje Pakietu Pro oraz 120 minut doradztwa kwartalnie. 500 zł netto miesięcznie + 10 zł za każdą dodatkową społeczność.",
+          "price": "500.00",
+          "priceCurrency": "PLN",
+          "url": "https://plz.pl/cennik/",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <!-- ===== Navbar ===== -->

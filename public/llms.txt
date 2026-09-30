@@ -1,0 +1,21 @@
+# PLZ (Platforma Lokalnych Zasobów)
+
+> Polska, spółdzielcza aplikacja do zarządzania społecznością i współpracy: czaty, głosowania formalne, wydarzenia, zadania, składki i płatności — z danymi przechowywanymi w Polsce.
+
+PLZ jest produktem PLZ Spółdzielni, spółdzielni cyfrowej prowadzącej CoopTech Hub, pierwsze w Polsce centrum technologii spółdzielczych. Aplikacja przeznaczona jest dla spółdzielni, związków zawodowych, organizacji pozarządowych, wspólnot mieszkaniowych, kół gospodyń wiejskich i samorządów lokalnych.
+
+## Kluczowe funkcje
+- Głosowania formalne z raportowaniem zgodnym z Prawem spółdzielczym
+- Czaty i kanały społeczności
+- Wydarzenia i zadania
+- Składki, darowizny i płatności (integracja z Autopay)
+- Karta członkowska i program lojalnościowy
+
+## Cena
+Konto osobiste: bezpłatne. Abonament podstawowy dla organizacji: 80 zł netto miesięcznie za całą organizację.
+
+## Najważniejsze podstrony
+- [Wizja PLZ](https://plz.pl/wizja/): misja, model spółdzielczy, suwerenność cyfrowa, mapa rozwoju funkcjonalności
+- [Cennik](https://plz.pl/cennik.html): plany i ceny
+- [Pobierz aplikację](https://plz.pl/): Google Play i App Store
+- [Kontakt](https://plz.pl/contact.html): wdrożenia dla organizacji
